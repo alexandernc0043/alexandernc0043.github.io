@@ -1,8 +1,9 @@
 window.onload = function () {
-    var backgroundImg=["https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyB57zuc4bms-hDtWMa-4BZvscIlJDm4r7a9WLaO4SAxUvKM-DDA",
-                      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQBinSpWOvAtkxjmkf709O3rjH2ObRbWAEn9s0JcWaeL6LMtCbOrQ",
-                      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKY4J2qIFqkuDnABMzeypywbMSZL1cleS8vpySz0KD02wOYORU1g",
-                      "https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRQkdQT0zN0xDVP-VuvwojSbS5dOstX14eZvJCOWNPxKJ5dWTIc"
+    var backgroundImg=["alexandernc0043.github.io/images/5D13645D-FB6C-49EA-8570-0AC4F1D59BA9_1_105_c.jpeg",
+                      "alexandernc0043.github.io/images/7743C8A2-DDE7-467D-BBA3-E0A5EC5BBC74_1_105_c.jpeg",
+                      "alexandernc0043.github.io/images/7C18C057-B906-48CC-9632-A2329A13FEB8_1_105_c.jpeg",
+                      "alexandernc0043.github.io/images/CA935BA2-DCB1-4A86-BFE4-283A95AC61B6_1_105_c.jpeg",
+                      "alexandernc0043.github.io/images/E24E291D-8CA2-4733-B31E-3E6299870961_1_105_c.jpeg"
                       ]
     
       setInterval(changeImage, 5000);
