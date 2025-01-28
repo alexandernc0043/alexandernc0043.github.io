@@ -10,6 +10,11 @@
 
 <body>
 	<style>
+		:root {
+			--darkgrey: #2f2f2f;
+			--lightgrey: #f4f4f4;
+		}
+
 		html {
 			margin: 0;
 			padding: 0;
@@ -17,7 +22,7 @@
 		}
 
 		header {
-			background-color: #f4f4f4;
+			background-color: var(--lightgrey);
 			color: #333;
 			text-align: center;
 			padding: 1em;
@@ -27,23 +32,25 @@
 		footer {
 			position: fixed;
 			bottom: 0;
-			background-color: #2f2f2f;
+			background-color: var(--darkgrey);
 			text-align: center;
-			color: #fff;
+			color: white;
 			width: 100%;
 			top: 4;
 			font-size: 2em;
 		}
 
-		footer a {
-			color: #fff;
+		a {
+			color: white;
 			text-decoration: none;
-			position: relative;
+			transition: transform 0.8s;
 		}
 
-		footer a:hover {
+		a:hover {
 			color: lightblue;
 			font-weight: bold;
+			text-decoration: underline;
+			transform: scale(1.1);
 		}
 
 		body {
@@ -55,37 +62,34 @@
 			margin: 0;
 			padding: 0;
 		}
+
 		.welcome {
 			text-align: center;
 			font-size: 2em;
-			color: #fff;
+			color: white;
 			position: absolute;
 			top: 50%;
 			left: 50%;
 			transform: translate(-50%, -50%);
 		}
 		.welcome a {
-			color: lightblue;
-			text-decoration: none;
-		}
-		.welcome a:hover {
-			font-weight: bold;
+			text-decoration: underline;
 		}
 	</style>
 	<header>
 		<h1>Alexander Prechtel's Homepage</h1>
 	</header>
 	<div class="welcome">
-		<p>Please have a look around!</p>
-		<p>Click <a href="itis3135">here</a> to go to ITIS 3135 course.</p>
+		<h2>Please have a look around!</h2>
+		<p>Click <a href="itis3135/">here</a> to go to ITIS 3135 course.</p>
 	</div>
 	<div>
 		<footer>
-			<p><a href="https://webpages.charlotte.edu/aprechte">CLT Web</a> | <a
-					href="https://github.com/alexandernc0043">GitHub</a> | <a
-					href="https://alexandernc0043.github.io/">GitHub.io</a> | <a
-					href="https://alexandernc0043.github.io/itis3135/">ITIS3135.io</a> | <a
-					href="https://www.linkedin.com/in/alexander-prechtel-b4a0a9283/">LinkedIn</a></p>
+			<p><a href="https://webpages.charlotte.edu/aprechte" target="_blank">CLT Web</a> | <a
+					href="https://github.com/alexandernc0043" target="_blank">GitHub</a> | <a
+					href="https://alexandernc0043.github.io/" target="_blank">GitHub.io</a> | <a
+					href="https://alexandernc0043.github.io/itis3135/" target="_blank">ITIS3135.io</a> | <a
+					href="https://www.linkedin.com/in/alexander-prechtel-b4a0a9283/" target="_blank">LinkedIn</a></p>
 		</footer>
 	</div>
 

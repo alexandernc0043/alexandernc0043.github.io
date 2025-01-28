@@ -9,18 +9,89 @@
 </head>
 
 <body>
-    <h1>Alexander Prechtel's Advanced Pegasus ★ ITIS 3135 ★ Homepage</h1>
-    <h3>I am Alexander Prechtel and this is my ITIS 3135 First Course Page</h3>
-    <p>Click <a href="../">here</a> to go to my personal homepage.</p>
+    <style>
+        :root {
+            --darkgrey: #2f2f2f;
+            --lightgrey: #f4f4f4;
+        }
+
+        html {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            background-color: var(--lightgrey);
+            color: #333;
+            text-align: center;
+            padding: 1em;
+            left: 50%;
+        }
+
+        footer {
+            position: fixed;
+            bottom: 0;
+            background-color: var(--darkgrey);
+            text-align: center;
+            color: white;
+            width: 100%;
+            top: 4;
+            font-size: 2em;
+        }
+
+        a {
+            color: white;
+            text-decoration: none;
+            transition: transform 0.8s;
+        }
+
+        a:hover {
+            color: lightblue;
+            font-weight: bold;
+            text-decoration: underline;
+            transform: scale(1.1);
+        }
+
+        body {
+            background-image: url('/itis3135/images/background.jpg');
+            background-position: center;
+            background-size: cover;
+            width: 100vw;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+        }
+        .welcome {
+			text-align: center;
+			font-size: 2em;
+			color: white;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+		.welcome a {
+			text-decoration: underline;
+		}
+    </style>
+    <header>
+        <h1>Alexander Prechtel's Advanced Pegasus ★ ITIS 3135 ★ Homepage</h1>
+    </header>
+    <div class="welcome">
+        <h3>I am Alexander Prechtel and this is my ITIS 3135 First Course Page</h3>
+        <p>Click <a href="../">here</a> to go to my personal homepage.</p>
+    </div>
+
     <div>
         <footer>
-            <p><a href="https://webpages.charlotte.edu/aprechte">CLT Web</a> | <a
-                    href="https://github.com/alexandernc0043">GitHub</a> | <a
-                    href="https://alexandernc0043.github.io/">GitHub.io</a> | <a
-                    href="https://alexandernc0043.github.io/itis3135/">ITIS3135.io</a> | <a
-                    href="https://www.freecodecamp.org/aprechte">freeCodeCamp</a> | <a
-                    href="https://www.codecademy.com/profiles/aprechte">Codecademy</a> | <a
-                    href="https://www.linkedin.com/in/alexander-prechtel-b4a0a9283/">LinkedIn</a></p>
+            <p><a href="https://webpages.charlotte.edu/aprechte" target="_blank">CLT Web</a> | <a
+                    href="https://github.com/alexandernc0043" target="_blank">GitHub</a> | <a
+                    href="https://alexandernc0043.github.io/" target="_blank">GitHub.io</a> | <a
+                    href="https://alexandernc0043.github.io/itis3135/" target="_blank">ITIS3135.io</a> | <a
+                    href="https://www.freecodecamp.org/aprechte" target="_blank">freeCodeCamp</a> | <a
+                    href="https://www.codecademy.com/profiles/aprechte" target="_blank">Codecademy</a> | <a
+                    href="https://www.linkedin.com/in/alexander-prechtel-b4a0a9283/" target="_blank">LinkedIn</a></p>
         </footer>
     </div>
 
