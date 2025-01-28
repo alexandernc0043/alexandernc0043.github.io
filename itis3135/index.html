@@ -13,6 +13,7 @@
         :root {
             --darkgrey: #2f2f2f;
             --lightgrey: #f4f4f4;
+            --background-image: url('./images/background.jpg');
         }
 
         html {
@@ -54,7 +55,7 @@
         }
 
         body {
-            background-image: url('/itis3135/images/background.jpg');
+            background-image: var(--background-image);
             background-position: center;
             background-size: cover;
             width: 100vw;
