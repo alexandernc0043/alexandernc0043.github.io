@@ -1,16 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Homepage</title>
 	<script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
+	<style>
+		html {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+
+		header {
+			background-color: #f4f4f4;
+			color: #333;
+			text-align: center;
+			padding: 1em;
+			left: 50%;
+		}
+
+		footer {
+			position: fixed;
+			bottom: 0;
+			background-color: #2f2f2f;
+			text-align: center;
+			color: #fff;
+			width: 100%;
+			top: 4;
+			font-size: 2em;
+		}
+
+		footer a {
+			color: #fff;
+			text-decoration: none;
+			position: relative;
+		}
+
+		footer a:hover {
+			color: lightblue;
+			font-weight: bold;
+		}
+
+		body {
+			background-image: url('/itis3135/images/background.jpg');
+			background-position: center;
+			background-size: cover;
+			width: 100vw;
+			height: 100vh;
+			margin: 0;
+			padding: 0;
+		}
+		.welcome {
+			text-align: center;
+			font-size: 2em;
+			color: #fff;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+		.welcome a {
+			color: lightblue;
+			text-decoration: none;
+		}
+		.welcome a:hover {
+			font-weight: bold;
+		}
+	</style>
 	<header>
 		<h1>Alexander Prechtel's Homepage</h1>
 	</header>
-	<p>Please have a look around!</p>
-	<p>Click <a href="itis3135">here</a> to go to ITIS 3135 course.</p>
+	<div class="welcome">
+		<p>Please have a look around!</p>
+		<p>Click <a href="itis3135">here</a> to go to ITIS 3135 course.</p>
+	</div>
+	<div>
+		<footer>
+			<p><a href="https://webpages.charlotte.edu/aprechte">CLT Web</a> | <a
+					href="https://github.com/alexandernc0043">GitHub</a> | <a
+					href="https://alexandernc0043.github.io/">GitHub.io</a> | <a
+					href="https://alexandernc0043.github.io/itis3135/">ITIS3135.io</a> | <a
+					href="https://www.linkedin.com/in/alexander-prechtel-b4a0a9283/">LinkedIn</a></p>
+		</footer>
+	</div>
+
 </body>
+
 </html>
