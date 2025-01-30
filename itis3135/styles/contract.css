@@ -1,0 +1,7 @@
+.contract {
+    background-color: var(--lightgrey);
+    margin: 5vh auto;
+    padding: 20px;
+    border-radius: 20px;
+    max-width: 600px;
+}
