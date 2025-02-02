@@ -28,3 +28,25 @@ h1 {
 .bold {
     font-weight: bold;
 }
+@media(max-width: 1000px){
+    .introduction img {
+        max-width: 400px;
+        max-height: 400px;
+        border-radius: 20px;
+    }
+    .text {
+        max-width: 400px;
+        max-height: none;
+        margin-top: 20px;
+    }
+    .introduction {
+        display: flex;
+        margin: auto;
+        align-items: center;
+        flex-direction: column;
+    }
+    footer {
+        margin-top: 5vh;
+        position: relative;
+    }
+}

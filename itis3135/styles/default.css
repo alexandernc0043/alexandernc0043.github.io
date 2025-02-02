@@ -6,6 +6,7 @@
 }
 
 html {
+    scroll-behavior: smooth;
     font-family: 'Courier New', Courier, monospace;
 }
 
@@ -92,7 +93,7 @@ footer {
     text-align: center;
     padding: 10px 0;
     width: 100%;
-    position: absolute;
+    position: fixed;
     bottom: 0;
 }
 
@@ -116,5 +117,8 @@ footer a {
 @media(max-width: 600px) {
     .header-text {
         margin-top: 10vh;
+    }
+    footer {
+        position: relative;
     }
 }
