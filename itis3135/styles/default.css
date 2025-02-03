@@ -2,7 +2,7 @@
     --darkgrey: #2f2f2f;
     --lightgrey: #f4f4f4;
     --blue: #2276a0;
-    --background-image: url('/itis3135/images/background.jpg');
+    --background-image: url('../images/background.jpg');
 }
 
 html {
