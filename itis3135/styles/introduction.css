@@ -50,3 +50,10 @@ h1 {
         position: relative;
     }
 }
+.image p {
+    text-align: center;
+    color: var(--lightgrey);
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--darkgrey);
+}
