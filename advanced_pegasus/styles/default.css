@@ -1,0 +1,59 @@
+nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: darkgrey;
+    width: 100%;
+    height: 50px;
+}
+nav .links {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 25%;
+}
+header {
+    top: 0;
+    left: 0;
+    position: relative;
+    width: 100%;
+    height: 50px;
+    margin-bottom: 50px;
+}
+nav a {
+    font-size: 22px;
+}
+h1 {
+    font-size: 32px;
+}
+body {
+    margin: 0;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    align-items: center;
+}
+.mission {
+    margin-left: 25%;
+    margin-right: 25%;
+}
+.ai {
+    text-align: left;
+    align-items: flex-start;
+}
+footer {
+    display: flex;
+    justify-content: center;
+    bottom: 0;
+    width: 100%;
+    height: 75px;
+    left: 0;
+    position: absolute;
+    background-color: darkgrey;
+    font-size: 24px;
+    margin: auto;
+}
