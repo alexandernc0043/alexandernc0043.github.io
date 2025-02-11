@@ -1,7 +1,12 @@
 .contract {
-    background-color: var(--lightgrey);
-    margin: 5vh auto;
+    background-color: var(--darkgrey);
+    margin: 15vh auto;
     padding: 20px;
     border-radius: 20px;
     max-width: 600px;
+    opacity: 90%;
+    color: var(--lightgrey);
+}
+.contract a {
+    color: #2276a0;
 }

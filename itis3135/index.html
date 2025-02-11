@@ -7,46 +7,25 @@
 	<title>ITIS 3135</title>
 	<script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 	<link rel="stylesheet" href="styles/default.css">
+
 </head>
 
 <body>
-	<div class="navbar">
-		<div class="container">
-			<nav>
-				<p id="name">Alexander Prechtel's Advanced Pegasus ★ ITIS 3135 ★ Homepage</p>
-				<ul id="sidemenu">
-					<li><a href="..">Home</a></li>
-					<li><a href="index.html">ITIS 3135</a></li>
-					<li><a href="introduction.html">Introduction</a></li>
-					<li><a href="contract.html">Contract</a></li>
-				</ul>
-			</nav>
-		</div>
-	</div>
+	<div data-include="components/navbar.html" data-replace="%title%:Homepage"></div>
 	<header>
-		<div class="container">
-			<div class="header-text">
-				<p>Web-Based Application Design and Development</p>
-				<p class="main">Hi, welcome to my <span>ITIS 3135</span> course page!</p>
-			</div>
+		<div class="header-text">
+			<h2>Web-Based Application Design and Development</h2>
+			<p class="main">Hi, welcome to my <span>ITIS 3135</span> course page!</p>
 		</div>
 	</header>
-
-	<footer>
-		<p>
-			<a href="https://webpages.charlotte.edu/aprechte" target="_blank">CLT Web</a> | <a
-				href="https://github.com/alexandernc0043" target="_blank">GitHub</a> | <a
-				href="https://alexandernc0043.github.io/" target="_blank">GitHub.io</a> | <a
-				href="https://alexandernc0043.github.io/itis3135/" target="_blank">ITIS3135.io</a> | <a
-				href="https://www.freecodecamp.org/aprechte" target="_blank">freeCodeCamp</a> | <a
-				href="https://www.codecademy.com/profiles/aprechte" target="_blank">Codecademy</a> | <a
-				href="https://www.linkedin.com/in/alexander-prechtel-b4a0a9283/" target="_blank">LinkedIn</a>
-		</p>
-		<div class="design">
-<!--			<p>Designed by Alexander Prechtel © 2025</p>-->
-			<p>Designed by <a href="alexanderprechteldesigns.com/index.html">Alexander Prechtel Designs</a></p>
+	<main>
+		<div class="disclaimer">
+			<p>Image taken by Alexander Prechtel in 2024 at the Libary of Congress in Washington, DC</p>
 		</div>
+	</main>
+	<footer>
+		<div data-include="components/footer.html"></div>
 	</footer>
+	<script src="scripts/HTMLInclude.js"></script>
 </body>
-
 </html>

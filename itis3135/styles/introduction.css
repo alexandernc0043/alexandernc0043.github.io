@@ -15,7 +15,7 @@
     flex-direction: row;
     justify-content: space-evenly;
 }
-h1 {
+h2 {
     color: white;
     background-color: var(--darkgrey);
     padding: 10px;
