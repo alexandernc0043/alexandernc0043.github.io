@@ -4,6 +4,8 @@
     max-width: 600px;
     max-height: 600px;
     background-color: var(--lightgrey);
+    display: flex;
+    flex-direction: column;
 }
 .introduction img {
     max-width: 600px;
@@ -14,6 +16,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
+    height: 100%;
 }
 h2 {
     color: white;
@@ -28,11 +31,12 @@ h2 {
 .bold {
     font-weight: bold;
 }
-@media(max-width: 1000px){
+@media(max-width: 1800px){
     .introduction img {
         max-width: 400px;
         max-height: 400px;
         border-radius: 20px;
+
     }
     .text {
         max-width: 400px;
@@ -49,6 +53,11 @@ h2 {
         margin-top: 5vh;
         position: relative;
     }
+    .image {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
 .image p {
     text-align: center;
@@ -56,4 +65,10 @@ h2 {
     padding: 10px;
     border-radius: 10px;
     background-color: var(--darkgrey);
+}
+@media(max-height: 900px) {
+    .introduction {
+        display: flex;
+    }
+
 }
