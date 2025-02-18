@@ -24,7 +24,7 @@ body {
 
 header {
     margin: 5vh auto;
-    width: fit-content;
+    max-width: 500px;
     padding: 30px;
     border-radius: 10px;
     display: flex;

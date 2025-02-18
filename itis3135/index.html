@@ -10,10 +10,10 @@
 </head>
 <body>
 <div data-include="components/navbar.html"></div>
-<header>
-    <h2>Web-Based Application Design and Development</h2>
-    <p>Hi, welcome to my <span>ITIS 3135</span> course page!</p>
-</header>
+<div data-replace="
+%text%:Web-Based Application Design and Development,
+%secondary%:Hi welcome to my <span>ITIS 3135</span> course page!
+" data-include="components/headerSecondary.html"></div>
 <main>
     <div class="disclaimer">
         <p></p>
