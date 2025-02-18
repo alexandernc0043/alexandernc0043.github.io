@@ -1,0 +1,68 @@
+:root {
+    --darkgrey: #2f2f2f;
+    --lightgrey: #f4f4f4;
+    --blue: #2276a0;
+    --background-image: url('itis3135/images/wyoming.jpg');
+}
+
+html {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    background-color: white;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: var(--background-image);
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
+}
+
+header {
+    padding: 10px 10%;
+}
+
+a {
+    transition: 0.5s;
+}
+
+a:hover {
+    color: var(--blue);
+    font-weight: bolder;
+}
+
+header p {
+    margin-top: 65vh;
+    font-size: 30px;
+    color: var(--lightgrey);
+    font-weight: bold;
+}
+
+h2 {
+    font-size: 60px;
+    margin-top: 30px;
+    color: var(--lightgrey);
+}
+
+span {
+    color: var(--blue);
+}
+
+footer {
+    background: var(--darkgrey);
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
