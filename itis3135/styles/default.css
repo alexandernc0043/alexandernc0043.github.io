@@ -23,26 +23,44 @@ body {
 }
 
 header {
-    width: 850px;
-    margin: auto auto auto 50px;
+    margin: 5vh auto;
+    width: fit-content;
+    padding: 30px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--lightgrey);
+    opacity: 80%;
 }
-
-.navbar {
-    background: var(--darkgrey);
+header p {
+    font-weight: bold;
+    font-size: 20px;
+    color: var(--darkgrey);
+}
+header span {
+    font-weight: bold;
+}
+h2 {
+    font-size: 30px;
 }
 
 nav {
+    background: var(--darkgrey);
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px 10%;
 }
 
-nav #name {
+h1 {
     color: #fff;
-    font-size: 18px;
+    font-size: 25px;
     border-color: #fff;
     text-decoration: none;
+    font-weight: normal;
 }
 
 nav ul li {
@@ -61,30 +79,18 @@ nav ul li a {
 a {
     transition: 0.5s;
 }
+p {
+    font-weight: bold;
+}
 
 a:hover {
     color: var(--blue);
     font-weight: bolder;
 }
 
-.header-text {
-    margin-top: 35vh;
-    font-size: 20px;
-    color: #fff;
-    background-color: var(--darkgrey);
-    opacity: 90%;
-    padding: 15px;
-    border-radius: 25px;
-}
-
-.main {
-    font-size: 30px;
-    margin-top: 30px;
-}
-
 span {
     color: #2276a0;
-    font-weight: 500;
+    font-weight: bold;
 }
 
 footer {
@@ -96,32 +102,13 @@ footer {
     position: fixed;
     bottom: 0;
 }
-
+footer p {
+    font-weight: normal;
+}
 footer a {
     color: white;
     text-decoration: none;
-    margin: 0 10px;
 }
-
-.design {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.disclaimer {
-    color: var(--darkgrey);
-    padding: 10px;
-    background-color: var(--lightgrey);
-    border-radius: 15px;
-    position: absolute;
-    bottom: 125px;
-    left: calc(100vw - 500px);
-}
-.disclaimer p {
-    align-self: flex-end;
-    text-align: center;
-}
-
 @media(max-width: 1000px) {
     .header-text {
         margin-top: 20vh;

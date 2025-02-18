@@ -1,12 +1,16 @@
-.contract {
-    background-color: var(--darkgrey);
-    margin: 15vh auto;
+main p {
+    background-color: var(--lightgrey);
+    margin: 5vh auto;
     padding: 20px;
     border-radius: 20px;
-    max-width: 600px;
-    opacity: 90%;
-    color: var(--lightgrey);
+    max-width: 800px;
+    font-size: 30px;
+    opacity: 80%;
+    color: var(--darkgrey);
 }
-.contract a {
-    color: #2276a0;
+main a {
+    color: var(--blue)
+}
+footer {
+    position: relative;
 }
