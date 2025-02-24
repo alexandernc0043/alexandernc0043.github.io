@@ -54,6 +54,10 @@ nav {
     justify-content: space-between;
     padding: 10px 10%;
 }
+#first {
+    display: flex;
+    justify-content: center;
+}
 h1 {
     color: #fff;
     font-size: 25px;
