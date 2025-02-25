@@ -9,7 +9,26 @@
         <ul id="second">
             <li><a href="../advanced_pegasus/index.html">Advanced Pegasus</a></li>
             <li><a href="stuff/cRaPpY💩 website.htm">Crap Website</a></li>
-            <li><a href="crapdesign.html">Website Evaluation</a></li>
+            <li><a href="websiteevaluation.html">Website Evaluation</a></li>
         </ul>
     </div>
+    <script>
+
+        /* Path */
+        let path = window.location.pathname;
+        if (path.includes('/aprechte/')) {
+            path = path.replace('/aprechte', '');
+        }
+        const links = document.querySelectorAll('nav div ul li a');
+        links.forEach((it) => {
+            const linkName = it.textContent.toLowerCase().replace(' ', '');
+            if (path.includes(linkName)) {
+                it.style.display = 'none';
+            } else if (path === '/itis3135/' || path === '/itis3135/index.html') {
+                if (linkName === 'home') {
+                    it.style.display = 'none';
+                }
+            }
+        })
+    </script>
 </nav>
