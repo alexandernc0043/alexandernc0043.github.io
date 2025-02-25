@@ -1,0 +1,205 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--    TODO: CHANGE THIS LATER-->
+    <title>Hobby</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .active {
+            padding-top: 50px;
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            flex-wrap: wrap;
+            text-align: center;
+        }
+
+        section {
+            width: 100vw;
+            height: 100vh;
+            display: none;
+        }
+
+        nav {
+            display: flex;
+            background-color: #2f2f2f;
+            flex-direction: row;
+            width: 100vw;
+            margin: 0;
+            padding: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 50px;
+            max-height: 50px;
+        }
+
+        nav ul {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            justify-content: space-evenly;
+            list-style: none;
+        }
+
+        nav ul a {
+            text-decoration: none;
+            color: white;
+        }
+
+        #who {
+            background-color: #FF5733; /* Example color */
+        }
+
+        #what {
+            background-color: #33FF57; /* Example color */
+        }
+
+        #when {
+            background-color: #3357FF; /* Example color */
+        }
+
+        #where {
+            background-color: #FF33A1; /* Example color */
+        }
+
+        #how {
+            background-color: #A133FF; /* Example color */
+        }
+
+        #why {
+            background-color: #33FFF5; /* Example color */
+        }
+
+        #ai {
+            background-color: #FF8C33; /* Example color */
+        }
+
+    </style>
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><a href="../">ITIS3135</a></li>
+            <li><a href="#who">Who</a></li>
+            <li><a href="#what">What</a></li>
+            <li><a href="#when">When</a></li>
+            <li><a href="#where">Where</a></li>
+            <li><a href="#how">How</a></li>
+            <li><a href="#why">Why</a></li>
+            <li><a href="#ai">AI Prompts</a></li>
+        </ul>
+    </nav>
+</header>
+<!--TODO: who (this name is a guide- you can change it to be something related, like "About Me" or "About" or "Who we Are")-->
+<section id="who" class="active">
+    <h2>Who</h2>
+    <p>Paragraph 1</p>
+    <p>Paragraph 2</p>
+    <figure></figure>
+    <p></p>
+    <figure></figure>
+    <figure></figure>
+    <table></table>
+    <form action=""></form>
+    <figure></figure>
+</section>
+<!--TODO: what (this will be your home page- and you can call it home, and it's what should load first, explain what the hobby is about )-->
+<section id="what">
+    <h2>What</h2>
+    <p>Paragraph 1</p>
+    <p>Paragraph 2</p>
+    <figure></figure>
+    <p></p>
+    <figure></figure>
+    <figure></figure>
+    <table></table>
+    <form action=""></form>
+    <figure></figure>
+</section>
+<!--TODO: when (this name is a guide - you can change use it or change it to something like "Best Times" or "Schedule" or "Seasons" or something time related.-->
+<section id="when">
+    <h2>When</h2>
+    <p>Paragraph 1</p>
+    <p>Paragraph 2</p>
+    <figure></figure>
+    <p></p>
+    <figure></figure>
+    <figure></figure>
+    <table></table>
+    <form action=""></form>
+    <figure></figure>
+</section>
+
+<!--TODO: where (this name is a guide and you can also change it to "best locations" or something like that)-->
+<section id="where">
+    <h2>Where</h2>
+    <p>Paragraph 1</p>
+    <p>Paragraph 2</p>
+    <figure></figure>
+    <p></p>
+    <figure></figure>
+    <figure></figure>
+    <table></table>
+    <form action=""></form>
+    <figure></figure>
+</section>
+
+<!--TODO: how-->
+<section id="how">
+    <h2>How</h2>
+    <p>Paragraph 1</p>
+    <p>Paragraph 2</p>
+    <figure></figure>
+    <p></p>
+    <figure></figure>
+    <figure></figure>
+    <table></table>
+    <form action=""></form>
+    <figure></figure>
+</section>
+
+<!--TODO: why-->
+<section id="why">
+    <h2>Why</h2>
+    <p>Paragraph 1</p>
+    <p>Paragraph 2</p>
+    <figure></figure>
+    <p></p>
+    <figure></figure>
+    <figure></figure>
+    <table></table>
+    <form action=""></form>
+    <figure></figure>
+</section>
+
+<!--TODO: AI Prompts-->
+<section id="ai">
+    <h2>AI Prompts</h2>
+    <p>Paragraph 1</p>
+    <p>Paragraph 2</p>
+    <figure></figure>
+    <p></p>
+    <figure></figure>
+    <figure></figure>
+    <table></table>
+    <form action=""></form>
+    <figure></figure>
+</section>
+<script>
+    window.addEventListener('hashchange', () => {
+        let active = document.querySelector('.active');
+        const path = window.location.hash;
+        const newActive = document.querySelector(path);
+        if (active) active.classList.remove('active');
+        if (newActive) newActive.classList.add('active');
+    });
+</script>
+</body>
+</html>
