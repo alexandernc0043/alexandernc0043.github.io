@@ -1,17 +1,21 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!--    TODO: CHANGE THIS LATER-->
     <title>Hobby</title>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
     <style>
-        body {
+        html, body {
             margin: 0;
-            padding: 0;
+            height: 100%;
+            overflow: hidden;
+            font-family: sans-serif;
         }
 
         .active {
-            padding-top: 50px;
+            padding-top: 75px;
             display: flex;
             flex-direction: column;
             align-content: center;
@@ -35,65 +39,55 @@
             position: absolute;
             top: 0;
             left: 0;
-            height: 50px;
-            max-height: 50px;
+            height: 75px;
+            max-height: 750px;
+            font-size: 25px;
+        }
+
+        h1 {
+            display: flex;
+            width: 25%;
+            align-items: center;
+            justify-content: center;
+            color: #2276a0;
         }
 
         nav ul {
             display: flex;
             flex-direction: row;
-            width: 100%;
+            width: 75%;
             justify-content: space-evenly;
+            align-items: center;
             list-style: none;
+            margin: 0;
         }
 
         nav ul a {
             text-decoration: none;
             color: white;
+            transition: background-color 0.5s ease-out, padding 0.5s ease-out, border-radius 0.5s ease-out;
         }
 
-        #who {
-            background-color: #FF5733; /* Example color */
+        nav ul a:hover {
+            background-color: #2276a0;
+            padding: 5px;
+            border-radius: 10px;
         }
-
-        #what {
-            background-color: #33FF57; /* Example color */
-        }
-
-        #when {
-            background-color: #3357FF; /* Example color */
-        }
-
-        #where {
-            background-color: #FF33A1; /* Example color */
-        }
-
-        #how {
-            background-color: #A133FF; /* Example color */
-        }
-
-        #why {
-            background-color: #33FFF5; /* Example color */
-        }
-
-        #ai {
-            background-color: #FF8C33; /* Example color */
-        }
-
     </style>
 </head>
 <body>
 <header>
     <nav>
+        <h1>Hobby Page</h1>
         <ul>
             <li><a href="../">ITIS3135</a></li>
-            <li><a href="#who">Who</a></li>
-            <li><a href="#what">What</a></li>
-            <li><a href="#when">When</a></li>
-            <li><a href="#where">Where</a></li>
-            <li><a href="#how">How</a></li>
-            <li><a href="#why">Why</a></li>
-            <li><a href="#ai">AI Prompts</a></li>
+            <li><a href="#who">WHO</a></li>
+            <li><a href="#what">WHAT</a></li>
+            <li><a href="#when">WHEN</a></li>
+            <li><a href="#where">WHERE</a></li>
+            <li><a href="#how">HOW</a></li>
+            <li><a href="#why">WHY</a></li>
+            <li><a href="#ai">AI PROMPTS</a></li>
         </ul>
     </nav>
 </header>
@@ -107,7 +101,7 @@
     <figure></figure>
     <figure></figure>
     <table></table>
-    <form action=""></form>
+    <!--    <form action=""></form>-->
     <figure></figure>
 </section>
 <!--TODO: what (this will be your home page- and you can call it home, and it's what should load first, explain what the hobby is about )-->
@@ -120,7 +114,7 @@
     <figure></figure>
     <figure></figure>
     <table></table>
-    <form action=""></form>
+    <!--    <form action=""></form>-->
     <figure></figure>
 </section>
 <!--TODO: when (this name is a guide - you can change use it or change it to something like "Best Times" or "Schedule" or "Seasons" or something time related.-->
@@ -133,10 +127,9 @@
     <figure></figure>
     <figure></figure>
     <table></table>
-    <form action=""></form>
+    <!--    <form action=""></form>-->
     <figure></figure>
 </section>
-
 <!--TODO: where (this name is a guide and you can also change it to "best locations" or something like that)-->
 <section id="where">
     <h2>Where</h2>
@@ -147,10 +140,9 @@
     <figure></figure>
     <figure></figure>
     <table></table>
-    <form action=""></form>
+    <!--    <form action=""></form>-->
     <figure></figure>
 </section>
-
 <!--TODO: how-->
 <section id="how">
     <h2>How</h2>
@@ -161,10 +153,9 @@
     <figure></figure>
     <figure></figure>
     <table></table>
-    <form action=""></form>
+    <!--    <form action=""></form>-->
     <figure></figure>
 </section>
-
 <!--TODO: why-->
 <section id="why">
     <h2>Why</h2>
@@ -175,10 +166,9 @@
     <figure></figure>
     <figure></figure>
     <table></table>
-    <form action=""></form>
+    <!--    <form action=""></form>-->
     <figure></figure>
 </section>
-
 <!--TODO: AI Prompts-->
 <section id="ai">
     <h2>AI Prompts</h2>
@@ -189,17 +179,34 @@
     <figure></figure>
     <figure></figure>
     <table></table>
-    <form action=""></form>
+    <!--    <form action=""></form>-->
     <figure></figure>
 </section>
+
+
 <script>
-    window.addEventListener('hashchange', () => {
-        let active = document.querySelector('.active');
+    function display() {
+        const active = document.querySelector('.active');
         const path = window.location.hash;
         const newActive = document.querySelector(path);
+
         if (active) active.classList.remove('active');
         if (newActive) newActive.classList.add('active');
-    });
+
+        const header = document.querySelector('h1');
+        const headerSection = path !== '#ai'
+            ? path.replace('#', '').charAt(0).toUpperCase() + path.replace('#', '').slice(1) // Will be first letter capital, EX: Hello
+            : path.replace('#', '').toUpperCase(); // Will be all capital, EX: AI
+
+        header.textContent = `Hobby Page ~ ${headerSection}`;
+    }
+
+    // Run function on page load, to make sure information is correct if page is loaded with hash already.
+    document.addEventListener('DOMContentLoaded', display);
+    // Run function on hash change.
+    window.addEventListener('hashchange', display); //
 </script>
+
+
 </body>
 </html>

@@ -1,35 +1,35 @@
 <nav>
     <h1>Alexander Prechtel's Advanced Pegasus ★ ITIS 3135</h1>
     <div>
-        <ul id="first">
+        <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="introduction.html">Introduction</a></li>
             <li><a href="contract.html">Contract</a></li>
         </ul>
-        <ul id="second">
+        <div id="divider"></div>
+        <ul>
             <li><a href="../advanced_pegasus/index.html">Advanced Pegasus</a></li>
             <li><a href="stuff/cRaPpY💩 website.htm">Crap Website</a></li>
             <li><a href="websiteevaluation.html">Website Evaluation</a></li>
-            <li><a href="hobby/">Hobby</a></li>
+            <li><a href="hobby/#who">Hobby Site</a></li>
         </ul>
     </div>
-    <script>
-
-        /* Path */
-        let path = window.location.pathname;
-        if (path.includes('/aprechte/')) {
-            path = path.replace('/aprechte', '');
-        }
-        const links = document.querySelectorAll('nav div ul li a');
-        links.forEach((it) => {
-            const linkName = it.textContent.toLowerCase().replace(' ', '');
-            if (path.includes(linkName)) {
-                it.style.display = 'none';
-            } else if (path === '/itis3135/' || path === '/itis3135/index.html') {
-                if (linkName === 'home') {
-                    it.style.display = 'none';
-                }
-            }
-        })
-    </script>
+<!--    <script>-->
+<!--        /* Path */-->
+<!--        let path = window.location.pathname;-->
+<!--        if (path.includes('/aprechte/')) {-->
+<!--            path = path.replace('/aprechte', '');-->
+<!--        }-->
+<!--        const links = document.querySelectorAll('nav div ul li a');-->
+<!--        links.forEach((it) => {-->
+<!--            const linkName = it.textContent.toLowerCase().replace(' ', '');-->
+<!--            if (path.includes(linkName)) {-->
+<!--                it.style.display = 'none';-->
+<!--            } else if (path === '/itis3135/' || path === '/itis3135/index.html') {-->
+<!--                if (linkName === 'home') {-->
+<!--                    it.style.display = 'none';-->
+<!--                }-->
+<!--            }-->
+<!--        })-->
+<!--    </script>-->
 </nav>
