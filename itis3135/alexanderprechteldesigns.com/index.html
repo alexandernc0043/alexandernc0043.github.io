@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,10 +15,12 @@
             width: 100%;
             height: 50px;
         }
+
         .title .logo {
             height: 100%;
             padding-right: 30px;
         }
+
         .title {
             height: 50px;
             display: flex;
@@ -25,12 +28,14 @@
             width: 40%;
             justify-content: center;
         }
+
         nav .links {
             display: flex;
             flex-direction: row;
             justify-content: space-around;
             width: 25%;
         }
+
         header {
             top: 0;
             left: 0;
@@ -39,34 +44,49 @@
             height: 50px;
             margin-bottom: 50px;
         }
+
         nav a {
             font-size: 22px;
         }
+
         h1 {
             font-size: 32px;
         }
+
         body {
             margin: 0;
+            width: 100%;
+            height: 100%;
         }
+
         main {
             display: flex;
             flex-direction: column;
-            flex-wrap: wrap;
             align-content: center;
             align-items: center;
+            justify-content: center;
+            padding: 0 10%;
+
         }
+
         footer {
             display: flex;
+            flex-direction: column;
             justify-content: center;
+            align-items: center;
             bottom: 0;
-            width: 100%;
-            height: 75px;
             left: 0;
-            position: absolute;
+            width: 100%;
+            height: 100px;
+            position: relative;
             background-color: darkgrey;
             font-size: 24px;
-            margin: auto;
         }
+
+        footer p {
+            margin: 0;
+        }
+
         ul {
             display: flex;
             flex-direction: column;
@@ -76,32 +96,66 @@
     </style>
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
+
 <body>
-<header>
-    <nav>
-        <div class="title">
-            <img class="logo" src="../images/pegasus-openclipart-org.svg" alt="Logo">
-            <h1>Alexander Prechtel Designs</h1>
+    <header>
+        <nav>
+            <div class="title">
+                <img class="logo" src="../images/pegasus-openclipart-org.svg" alt="Logo">
+                <h1>Alexander Prechtel Designs</h1>
+            </div>
+            <div class="links">
+                <a href="../">Home</a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <h2>Alexander Prechtel Designs Services</h2>
+        <ul>
+            <li>Custom website design and development</li>
+            <li>E-commerce solutions</li>
+            <li>Brand identity integration</li>
+            <li>UX/UI design</li>
+            <li>SEO optimization</li>
+            <li>Ongoing website maintenance and support</li>
+        </ul>
+        <h3>About</h3>
+        <div>
+            <p>Alexander Prechtel Designs is a boutique website design company dedicated to creating sophisticated digital
+                experiences for businesses and individuals alike. Founded by Alexander Prechtel, the company combines
+                innovative design principles with cutting-edge technology to deliver websites that are both visually
+                stunning and highly functional.</p>
+    
+            <p>The company specializes in custom website development, focusing on clean aesthetics, intuitive user
+                experiences, and responsive designs that work seamlessly across all devices. Their design philosophy
+                emphasizes minimalism with purpose—creating spaces where content can breathe while still guiding visitors
+                toward meaningful interactions.</p>
         </div>
-        <div class="links">
-            <a href="../">Home</a>
+        <h3>Our Approach</h3>
+        <div>
+            <p>What sets Alexander Prechtel Designs apart is their collaborative approach to client relationships. Each
+                project begins with a comprehensive discovery phase to understand the client's vision, target audience,
+                and
+                business objectives. This information forms the foundation for tailored solutions that align with brand
+                identity and strategic goals.</p>
+
+            <p>With a portfolio spanning various industries from luxury retail to professional services, Alexander
+                Prechtel
+                Designs has built a reputation for crafting digital experiences that not only capture attention but also
+                drive results.</p>
         </div>
-    </nav>
-</header>
-<main>
-    <h2>Alexander Prechtel Designs</h2>
-    <p>We design websites.</p>
-    <p>Why you should choose us?</p>
-    <ul>
-        <li>We are fast</li>
-        <li>We are cheap</li>
-        <li>We are reliable</li>
-        <li>We got great communication</li>
-        <li>100% Cash back guarantee</li>
-    </ul>
-</main>
-<footer>
-    <p>Alexander Prechtel Designs</p>
-</footer>
+        <h3>Contact Us</h3>
+        <div>
+            <p>Email: hello@aprechteldesigns.com</p>
+            <p>Phone: (123) 456-7890</p>
+            <p>Address: 1600 Pennsylvania Ave, Washington, DC</p>
+        </div>
+    </main>
+    <footer>
+        <p>Alexander Prechtel Designs</p>
+        <p><small>Created by Alexander Prechtel</small></p>
+        <p><small>Text Generated by AI</small></p>
+    </footer>
 </body>
+
 </html>
