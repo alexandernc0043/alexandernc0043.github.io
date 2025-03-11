@@ -35,10 +35,6 @@
             padding: 0 100px;
         }
 
-        section p:not:last-child {
-
-        }
-
         nav {
             display: flex;
             background-color: #2f2f2f;
@@ -117,14 +113,34 @@
             width: 300px;
             border-radius: 25px;
         }
+
         #when div {
             display: flex;
             flex-direction: row;
             justify-content: center;
         }
+
         .link-normal {
             color: blue;
             text-decoration: none;
+        }
+
+        figcaption {
+            font-style: italic;
+            text-align: center;
+        }
+
+        #how ul {
+            max-width: 400px;
+        }
+
+        #how {
+            align-items: center;
+            text-align: left;
+        }
+
+        #how li {
+            padding-bottom: 10px;
         }
 
     </style>
@@ -145,7 +161,6 @@
         </ul>
     </nav>
 </header>
-
 <section id="home">
     <h2>Home</h2>
     <figure>
@@ -191,6 +206,17 @@
 </section>
 <section id="when">
     <h2>When</h2>
+    <div>
+        <figure>
+            <img src="images/When1.jpeg" alt="Someone biking down a road in nice weather.">
+            <figcaption>Someone biking down a road in nice weather.</figcaption>
+        </figure>
+        <figure>
+            <img src="images/When2.jpeg" alt="">
+            <figcaption>Someone biking down a trail in the fall.</figcaption>
+        </figure>
+
+    </div>
     <p>The best time to go biking largely depends on the season and personal preference, but generally, early mornings
         and late afternoons are ideal. Riding in the early morning allows you to enjoy cooler temperatures, fewer
         crowds, and a peaceful atmosphere as the world wakes up. Late afternoons, especially during the golden hour
@@ -208,17 +234,104 @@
         matter the season, planning your rides around weather conditions and daylight hours ensures a safer and more
         enjoyable experience.
     </p>
-    <div>
-        <figure>
-            <img src="images/When1.jpeg" alt="Someone biking down a road in nice weather.">
-            <figcaption>Someone biking down a road in nice weather.</figcaption>
-        </figure>
-        <figure>
-            <img src="images/When2.jpeg" alt="">
-            <figcaption>Someone biking down a trail in the fall.</figcaption>
-        </figure>
 
-    </div>
+
+</section>
+<section id="where">
+    <h2>Where</h2>
+    <figure>
+        <img src="images/Where.jpeg" alt="Person biking on mountain trail">
+        <figcaption>Person biking on mountain trail</figcaption>
+    </figure>
+    <p>Biking is an exhilarating way to explore nature, stay active, and enjoy scenic routes. Some of the best locations
+        for biking include national parks, coastal trails, and dedicated urban bike paths. For breathtaking mountain
+        views, destinations like Moab, Utah, and Whistler, Canada, offer thrilling trails for both beginners and
+        advanced riders. Coastal routes such as California’s Pacific Coast Highway and Florida’s Overseas Highway
+        provide stunning ocean views and smooth rides. Cities like Amsterdam and Copenhagen are famous for their
+        bike-friendly infrastructure, making urban cycling both safe and enjoyable. Whether you’re looking for
+        challenging mountain trails, long-distance road cycling, or peaceful nature paths, the world is full of
+        fantastic biking destinations.</p>
+    <table>
+        <tr>
+            <th>#</th>
+            <th>Location</th>
+            <th>Terrain Type</th>
+            <th>Difficulty Level</th>
+        </tr>
+        <tr>
+            <th>1</th>
+            <th>Moab, Utah</th>
+            <th>Mountain Trails</th>
+            <th>Advanced</th>
+        </tr>
+        <tr>
+            <th>2</th>
+            <th>Whistler, Canada</th>
+            <th>Mountain Trails</th>
+            <th>Intermediate</th>
+        </tr>
+        <tr>
+            <th>3</th>
+            <th>Amsterdam, Netherlands</th>
+            <th>Urban Bike Paths</th>
+            <th>Easy</th>
+        </tr>
+        <tr>
+            <th>4</th>
+            <th>Pacific Coast Highway, USA</th>
+            <th>Coastal Road</th>
+            <th>Intermediate</th>
+        </tr>
+        <tr>
+            <th>5</th>
+            <th>Overseas Highway, Florida</th>
+            <th>Coastal Road</th>
+            <th>Easy</th>
+        </tr>
+        <tr>
+            <th>6</th>
+            <th>Copenhagen, Denmark</th>
+            <th>Urban Bike Paths</th>
+            <th>Easy</th>
+        </tr>
+        <tr>
+            <th>7</th>
+            <th>Great Divide Trail, USA</th>
+            <th>Gravel & Off-road</th>
+            <th>Advanced</th>
+        </tr>
+    </table>
+
+</section>
+<section id="how">
+    <h2>How</h2>
+    <figure>
+        <img src="images/How.jpeg" alt="Person showing another person how to bike">
+        <figcaption>Person showing another person how to bike</figcaption>
+    </figure>
+    <p>Learning to bike is a fun and rewarding experience that builds confidence and coordination. To start, find a
+        safe, open area like a park or an empty parking lot. </p>
+    <ul>
+        <li>Step 1: Adjust the seat so both feet can touch the
+            ground for balance.
+        </li>
+        <li>Step 2: Practice balancing by walking the bike forward with your feet, then lifting them
+            slightly to get used to the motion.
+        </li>
+        <li>Step 3: Start pedaling slowly while keeping your eyes forward and hands
+            firmly on the handlebars.
+        </li>
+        <li>Step 4: Learn to brake smoothly by gently squeezing the brakes rather than
+            stopping suddenly.
+        </li>
+        <li>Step 5: Once comfortable, practice turning by leaning slightly and steering in the
+            direction you want to go. With patience and practice, anyone can master biking and enjoy the freedom of the
+            ride!
+        </li>
+    </ul>
+</section>
+<section id="why">
+    <h2>Why</h2>
 
 </section>
 <section id="ai">
@@ -320,7 +433,53 @@
         </tr>
         <tr>
             <th>now generate two images</th>
-            <th><a href="images/When1.jpeg" target="_blank" class="link-normal">[IMAGE 1]</a> <a href="images/When2.jpeg" target="_blank" class="link-normal">[IMAGE 2]</a> Here are two images showcasing the beauty of biking in different seasons: one in a vibrant autumn setting and the other in a fresh, blooming spring landscape. Let me know if you’d like any adjustments or more images! 🚴‍♂️</th>
+            <th><a href="images/When1.jpeg" target="_blank" class="link-normal">[IMAGE 1]</a> <a
+                    href="images/When2.jpeg" target="_blank" class="link-normal">[IMAGE 2]</a> Here are two images
+                showcasing the beauty of biking in different seasons: one in a vibrant autumn setting and the other in a
+                fresh, blooming spring landscape. Let me know if you’d like any adjustments or more images! 🚴‍♂️
+            </th>
+            <th>4o</th>
+        </tr>
+        <tr>
+            <th>Write a paragraph on best locations for biking and then create a table and generate a picture</th>
+            <th><a href="#where" class="link-normal">[Table]</a> Biking is an exhilarating way to explore nature, stay
+                active, and enjoy scenic routes. Some of
+                the best locations for biking include national parks, coastal trails, and dedicated urban bike paths.
+                For breathtaking mountain views, destinations like Moab, Utah, and Whistler, Canada, offer thrilling
+                trails for both beginners and advanced riders. Coastal routes such as California’s Pacific Coast Highway
+                and Florida’s Overseas Highway provide stunning ocean views and smooth rides. Cities like Amsterdam and
+                Copenhagen are famous for their bike-friendly infrastructure, making urban cycling both safe and
+                enjoyable. Whether you’re looking for challenging mountain trails, long-distance road cycling, or
+                peaceful nature paths, the world is full of fantastic biking destinations.
+                <br><br>
+                I’ll generate a table with some of the best biking locations worldwide, including the type of terrain
+                and difficulty level.
+                <br><br>
+                <a href="images/Where.jpeg" class="link-normal" target="_blank">[Image]</a> I’ve generated a table with
+                some of the best biking locations along with their terrain types and
+                difficulty levels. Additionally, here’s a scenic biking trail image showcasing a beautiful mountainous
+                landscape, perfect for both adventure and leisure biking. Let me know if you need more details! 🚴‍♂️🏞️
+            </th>
+            <th>4o</th>
+        </tr>
+        <tr>
+            <th>Write a paragraph about how to bike with steps and generate an image of someone showing someone how to
+                bike
+            </th>
+            <th>Learning to bike is a fun and rewarding experience that builds confidence and coordination. To start,
+                find a safe, open area like a park or an empty parking lot. Step 1: Adjust the seat so both feet can
+                touch the ground for balance. Step 2: Practice balancing by walking the bike forward with your feet,
+                then lifting them slightly to get used to the motion. Step 3: Start pedaling slowly while keeping your
+                eyes forward and hands firmly on the handlebars. Step 4: Learn to brake smoothly by gently squeezing the
+                brakes rather than stopping suddenly. Step 5: Once comfortable, practice turning by leaning slightly and
+                steering in the direction you want to go. With patience and practice, anyone can master biking and enjoy
+                the freedom of the ride!
+                <br><br>
+                <a href="images/How.jpeg" class="link-normal" target="_blank">[IMAGE]</a> Now, I’ll generate an image of someone teaching another person how to bike. 🚴‍♂️👨‍🏫
+                <br><br>
+                I’ve created an image of a person teaching another how to ride a bicycle in a park. It captures the
+                learning process in a bright and friendly setting. Let me know if you need any adjustments! 🚴‍♂️🌞
+            </th>
             <th>4o</th>
         </tr>
     </table>
