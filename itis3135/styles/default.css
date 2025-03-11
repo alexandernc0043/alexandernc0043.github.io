@@ -154,22 +154,66 @@ footer a {
     color: white;
     text-decoration: none;
 }
+#mobile {
+    display: none;
+}
 
 /*
 DEVICE SETTINGS
  */
-@media (max-width: 1000px) {
-    .header-text {
-        margin-top: 20vh;
-    }
+
+main {
+    max-width: 1200px; /* Adjust as needed */
+    width: 90%; /* Adjust percentage based on design requirements */
+    margin: 0 auto; /* Centers the content horizontally */
 }
 
-@media (max-width: 600px) {
-    .header-text {
-        margin-top: 10vh;
+/* Rule Overrides For Laptops / Small Screens */
+@media screen and ( min-width: 981px ) and ( max-width: 1400px ) {
+    h1 {
+        font-size: 20px;
     }
-
+}
+/* Rule Overrides For Tablet Devices */
+@media screen and ( min-width: 601px ) and ( max-width: 980px )  {
+    h1 {
+        font-size: 16px;
+    }
+    nav ul li a {
+        font-size: 14px;
+    }
+    nav div {
+        width: 40%;
+    }
     footer {
-        position: relative;
+        font-size: 14px;
+    }
+}
+/* Rule Overrides For Mobile Devices */
+@media screen and (min-width: 370px) and (max-width: 600px) {
+    nav {
+        flex-direction: column;
+    }
+    h1 {
+        font-size: 16px;
+    }
+    nav ul li a {
+        font-size: 14px;
+    }
+    nav div {
+        width: 75%;
+        flex-direction: column-reverse;
+    }
+    #main {
+        display: none;
+    }
+    #mobile {
+        display: flex;
+    }
+    #mobile p:not(:last-child) {
+        font-size: 20px;
+        margin: 5px;
+        padding: 5px;
+        border-bottom: var(--lightgrey) 1px solid;
     }
 }
