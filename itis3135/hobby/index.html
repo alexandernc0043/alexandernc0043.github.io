@@ -10,23 +10,33 @@
         html, body {
             margin: 0;
             height: 100%;
-            overflow: hidden;
+            width: 100%;
             font-family: sans-serif;
         }
 
         .active {
-            padding-top: 75px;
+            padding-top: 150px;
+            padding-bottom: 50px;
+
             display: flex;
             flex-direction: column;
             align-content: center;
-            flex-wrap: wrap;
             text-align: center;
         }
 
         section {
             width: 100vw;
-            height: 100vh;
+            height: fit-content;
             display: none;
+        }
+
+        section p {
+            text-align: left;
+            padding: 0 100px;
+        }
+
+        section p:not:last-child {
+
         }
 
         nav {
@@ -37,9 +47,8 @@
             margin: 0;
             padding: 0;
             position: absolute;
-            top: 0;
             left: 0;
-            height: 75px;
+            top: 0;
             max-height: 750px;
             font-size: 25px;
         }
@@ -62,17 +71,62 @@
             margin: 0;
         }
 
-        nav ul a {
+        a:not(.link-normal) {
             text-decoration: none;
             color: white;
             transition: background-color 0.5s ease-out, padding 0.5s ease-out, border-radius 0.5s ease-out;
         }
 
-        nav ul a:hover {
+        a:hover:not(.link-normal) {
             background-color: #2276a0;
             padding: 5px;
             border-radius: 10px;
         }
+
+        footer {
+            background-color: #2f2f2f;
+            height: 5vh;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            color: white;
+        }
+
+        table {
+            margin: 0 50px;
+            border-collapse: collapse;
+        }
+
+        td, th {
+            border: 1px solid black;
+            text-align: center;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: lightgrey;
+        }
+
+        figure img:not(.screenshot) {
+            width: 500px;
+            height: 500px;
+            border-radius: 25px;
+        }
+
+        .screenshot {
+            width: 300px;
+            border-radius: 25px;
+        }
+        #when div {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        .link-normal {
+            color: blue;
+            text-decoration: none;
+        }
+
     </style>
 </head>
 <body>
@@ -81,109 +135,202 @@
         <h1>Hobby Page</h1>
         <ul>
             <li><a href="../">ITIS3135</a></li>
-            <li><a href="#who">WHO</a></li>
-            <li><a href="#what">WHAT</a></li>
-            <li><a href="#when">WHEN</a></li>
-            <li><a href="#where">WHERE</a></li>
-            <li><a href="#how">HOW</a></li>
-            <li><a href="#why">WHY</a></li>
-            <li><a href="#ai">AI PROMPTS</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#when">When</a></li>
+            <li><a href="#where">Where</a></li>
+            <li><a href="#how">How</a></li>
+            <li><a href="#why">Why</a></li>
+            <li><a href="#ai">AI Prompts</a></li>
         </ul>
     </nav>
 </header>
-<!--TODO: who (this name is a guide- you can change it to be something related, like "About Me" or "About" or "Who we Are")-->
-<section id="who" class="active">
-    <h2>Who</h2>
-    <p>Paragraph 1</p>
-    <p>Paragraph 2</p>
-    <figure></figure>
-    <p></p>
-    <figure></figure>
-    <figure></figure>
-    <table></table>
-    <!--    <form action=""></form>-->
-    <figure></figure>
+
+<section id="home">
+    <h2>Home</h2>
+    <figure>
+        <img src="images/Biker.jpeg" alt="Person biking on a scenic mountain trail during sunset.">
+        <figcaption>Person biking on a scenic mountain trail during sunset.</figcaption>
+    </figure>
+    <p>Biking is a fun, eco-friendly, and healthy way to get around, whether for commuting, exercise, or leisure. It
+        provides an excellent cardiovascular workout, strengthens muscles, and improves overall endurance while being
+        gentle on the joints. Cycling is also a great way to explore new places, enjoy scenic routes, and reduce stress
+        by spending time outdoors. Additionally, it’s an environmentally friendly mode of transportation that helps
+        reduce traffic congestion and carbon emissions. Whether you’re riding through city streets, tackling rugged
+        mountain trails, or cruising along a peaceful countryside road, biking offers a sense of freedom and adventure
+        that few other activities can match.</p>
+    <p>Biking is a versatile activity that suits people of all ages and fitness levels. It can be a high-intensity
+        sport, such as road racing or mountain biking, or a relaxing way to commute and run errands. Many cities have
+        embraced cycling by adding bike lanes and bike-sharing programs, making it easier and safer for riders to
+        navigate urban areas. Beyond physical benefits, biking also contributes to mental well-being by reducing stress
+        and boosting mood through the release of endorphins. Whether riding solo for peaceful reflection or with a group
+        for social connection, biking is an enjoyable and rewarding way to stay active while embracing a more
+        sustainable lifestyle.</p>
 </section>
-<!--TODO: what (this will be your home page- and you can call it home, and it's what should load first, explain what the hobby is about )-->
-<section id="what">
-    <h2>What</h2>
-    <p>Paragraph 1</p>
-    <p>Paragraph 2</p>
-    <figure></figure>
-    <p></p>
-    <figure></figure>
-    <figure></figure>
-    <table></table>
-    <!--    <form action=""></form>-->
-    <figure></figure>
+<section id="about">
+    <h2>About</h2>
+    <div style="display: grid;grid-template-columns: 1fr 1fr;">
+        <div>
+            <p>Hey there! I’m a biking enthusiast who loves the thrill of the open road and the challenge of new trails.
+                Whether it’s cruising through city streets or tackling rugged mountain paths, cycling is my way of
+                staying active, exploring new places, and clearing my mind. When I’m not on my bike, you can probably
+                find me planning my next ride or discovering new gear to enhance the experience. Let’s ride! 🚴‍♂️</p>
+            <p>Beyond biking, I enjoy the sense of freedom and adventure that comes with being outdoors. There’s
+                something special about the wind in my face, the rhythmic turning of the pedals, and the satisfaction of
+                pushing my limits. I also love connecting with fellow riders, sharing stories, and finding new routes
+                that make every journey exciting. No matter the destination, for me, the ride itself is always the best
+                part.</p>
+        </div>
+        <div>
+            <figure>
+                <img src="images/Bikeride.PNG" alt="Longest Bike Ride I've done" class="screenshot">
+                <figcaption>Longest Bike Ride I've done</figcaption>
+            </figure>
+        </div>
+    </div>
 </section>
-<!--TODO: when (this name is a guide - you can change use it or change it to something like "Best Times" or "Schedule" or "Seasons" or something time related.-->
 <section id="when">
     <h2>When</h2>
-    <p>Paragraph 1</p>
-    <p>Paragraph 2</p>
-    <figure></figure>
-    <p></p>
-    <figure></figure>
-    <figure></figure>
-    <table></table>
-    <!--    <form action=""></form>-->
-    <figure></figure>
+    <p>The best time to go biking largely depends on the season and personal preference, but generally, early mornings
+        and late afternoons are ideal. Riding in the early morning allows you to enjoy cooler temperatures, fewer
+        crowds, and a peaceful atmosphere as the world wakes up. Late afternoons, especially during the golden hour
+        before sunset, offer stunning views and a pleasant climate, making for a more relaxing ride. For those commuting
+        or fitting cycling into a busy schedule, lunchtime or early evening rides can also work, provided the
+        temperatures are comfortable. It’s important to avoid the peak heat of midday, especially in summer, to prevent
+        exhaustion and dehydration.
+    </p>
+    <p>
+        When it comes to seasons, spring and fall are often considered the best for biking. Spring brings fresh air,
+        blooming scenery, and moderate temperatures, making it perfect for long rides. Fall, on the other hand, offers
+        crisp air and beautiful foliage, creating a scenic and comfortable experience. Summer can be great for cycling
+        if you ride early in the morning or later in the evening to avoid extreme heat. Winter biking is possible with
+        the right gear, such as thermal clothing and fat-tire bikes for snow, but it requires more preparation. No
+        matter the season, planning your rides around weather conditions and daylight hours ensures a safer and more
+        enjoyable experience.
+    </p>
+    <div>
+        <figure>
+            <img src="images/When1.jpeg" alt="Someone biking down a road in nice weather.">
+            <figcaption>Someone biking down a road in nice weather.</figcaption>
+        </figure>
+        <figure>
+            <img src="images/When2.jpeg" alt="">
+            <figcaption>Someone biking down a trail in the fall.</figcaption>
+        </figure>
+
+    </div>
+
 </section>
-<!--TODO: where (this name is a guide and you can also change it to "best locations" or something like that)-->
-<section id="where">
-    <h2>Where</h2>
-    <p>Paragraph 1</p>
-    <p>Paragraph 2</p>
-    <figure></figure>
-    <p></p>
-    <figure></figure>
-    <figure></figure>
-    <table></table>
-    <!--    <form action=""></form>-->
-    <figure></figure>
-</section>
-<!--TODO: how-->
-<section id="how">
-    <h2>How</h2>
-    <p>Paragraph 1</p>
-    <p>Paragraph 2</p>
-    <figure></figure>
-    <p></p>
-    <figure></figure>
-    <figure></figure>
-    <table></table>
-    <!--    <form action=""></form>-->
-    <figure></figure>
-</section>
-<!--TODO: why-->
-<section id="why">
-    <h2>Why</h2>
-    <p>Paragraph 1</p>
-    <p>Paragraph 2</p>
-    <figure></figure>
-    <p></p>
-    <figure></figure>
-    <figure></figure>
-    <table></table>
-    <!--    <form action=""></form>-->
-    <figure></figure>
-</section>
-<!--TODO: AI Prompts-->
 <section id="ai">
-    <h2>AI Prompts</h2>
-    <p>Paragraph 1</p>
-    <p>Paragraph 2</p>
-    <figure></figure>
-    <p></p>
-    <figure></figure>
-    <figure></figure>
-    <table></table>
-    <!--    <form action=""></form>-->
-    <figure></figure>
+    <h2>Artificial Intelligence Prompts</h2>
+    <i>All prompts were generated with ChatGPT using the plus plan.</i>
+    <figure>
+        <img src="images/AI.jpeg" alt="Generated image of a futuristic computer deep in thought">
+        <figcaption>Generated image of a futuristic computer deep in thought</figcaption>
+    </figure>
+    <table>
+        <tr>
+            <th>Prompt</th>
+            <th>Response</th>
+            <th>Model</th>
+        </tr>
+        <tr>
+            <th>Write a paragraph about biking</th>
+            <th>Biking is a fun, eco-friendly, and healthy way to get around, whether for commuting, exercise, or
+                leisure. It provides an excellent cardiovascular workout, strengthens muscles, and improves overall
+                endurance while being gentle on the joints. Cycling is also a great way to explore new places, enjoy
+                scenic routes, and reduce stress by spending time outdoors. Additionally, it’s an environmentally
+                friendly mode of transportation that helps reduce traffic congestion and carbon emissions. Whether
+                you’re riding through city streets, tackling rugged mountain trails, or cruising along a peaceful
+                countryside road, biking offers a sense of freedom and adventure that few other activities can match.
+            </th>
+            <th>4o</th>
+        </tr>
+        <tr>
+            <th>write another paragraph about it</th>
+            <th>Biking is a versatile activity that suits people of all ages and fitness levels. It can be a
+                high-intensity sport, such as road racing or mountain biking, or a relaxing way to commute and run
+                errands. Many cities have embraced cycling by adding bike lanes and bike-sharing programs, making it
+                easier and safer for riders to navigate urban areas. Beyond physical benefits, biking also contributes
+                to mental well-being by reducing stress and boosting mood through the release of endorphins. Whether
+                riding solo for peaceful reflection or with a group for social connection, biking is an enjoyable and
+                rewarding way to stay active while embracing a more sustainable lifestyle.
+            </th>
+            <th>4o</th>
+        </tr>
+        <tr>
+            <th>generate an image of someone biking</th>
+            <th><a href="images/Biker.jpeg" class="link-normal" target="_blank">[IMAGE]</a> Here is the generated image
+                of a person biking on a scenic mountain trail during sunset. Let me know if you’d like any
+                modifications! 🚴‍♂️🌄
+            </th>
+            <th>4o</th>
+        </tr>
+        <tr>
+            <th>generate an image of a computer thinking</th>
+            <th><a href="images/AI.jpeg" target="_blank" class="link-normal">[IMAGE]</a> Here is the generated image of
+                a futuristic computer deep in thought, with a glowing AI brain and a high-tech environment. Let me know
+                if you’d like any modifications! 🤖💭
+            </th>
+            <th>4o</th>
+        </tr>
+        <tr>
+            <th>write an about me
+
+                I like biking
+            </th>
+            <th>Hey there! I’m a biking enthusiast who loves the thrill of the open road and the challenge of new
+                trails. Whether it’s cruising through city streets or tackling rugged mountain paths, cycling is my way
+                of staying active, exploring new places, and clearing my mind. When I’m not on my bike, you can probably
+                find me planning my next ride or discovering new gear to enhance the experience.
+
+                Let’s ride! 🚴‍♂️
+            </th>
+            <th>4o</th>
+        </tr>
+        <tr>
+            <th>write another paragraph</th>
+            <th>Beyond biking, I enjoy the sense of freedom and adventure that comes with being outdoors. There’s
+                something special about the wind in my face, the rhythmic turning of the pedals, and the satisfaction of
+                pushing my limits. I also love connecting with fellow riders, sharing stories, and finding new routes
+                that make every journey exciting. No matter the destination, for me, the ride itself is always the best
+                part.
+            </th>
+            <th>4o</th>
+        </tr>
+        <tr>
+            <th>write 2 paragraphs about the best times, schedule, and seasons to do biking in</th>
+            <th>The best time to go biking largely depends on the season and personal preference, but generally, early
+                mornings and late afternoons are ideal. Riding in the early morning allows you to enjoy cooler
+                temperatures, fewer crowds, and a peaceful atmosphere as the world wakes up. Late afternoons, especially
+                during the golden hour before sunset, offer stunning views and a pleasant climate, making for a more
+                relaxing ride. For those commuting or fitting cycling into a busy schedule, lunchtime or early evening
+                rides can also work, provided the temperatures are comfortable. It’s important to avoid the peak heat of
+                midday, especially in summer, to prevent exhaustion and dehydration.
+
+                When it comes to seasons, spring and fall are often considered the best for biking. Spring brings fresh
+                air, blooming scenery, and moderate temperatures, making it perfect for long rides. Fall, on the other
+                hand, offers crisp air and beautiful foliage, creating a scenic and comfortable experience. Summer can
+                be great for cycling if you ride early in the morning or later in the evening to avoid extreme heat.
+                Winter biking is possible with the right gear, such as thermal clothing and fat-tire bikes for snow, but
+                it requires more preparation. No matter the season, planning your rides around weather conditions and
+                daylight hours ensures a safer and more enjoyable experience.
+            </th>
+            <th>4o</th>
+        </tr>
+        <tr>
+            <th>now generate two images</th>
+            <th><a href="images/When1.jpeg" target="_blank" class="link-normal">[IMAGE 1]</a> <a href="images/When2.jpeg" target="_blank" class="link-normal">[IMAGE 2]</a> Here are two images showcasing the beauty of biking in different seasons: one in a vibrant autumn setting and the other in a fresh, blooming spring landscape. Let me know if you’d like any adjustments or more images! 🚴‍♂️</th>
+            <th>4o</th>
+        </tr>
+    </table>
+
+
 </section>
-
-
+<footer>
+    <p>Designed by <a href="../alexanderprechteldesigns.com/index.html">Alexander Prechtel Designs</a></p>
+</footer>
+<!-- Javascript -->
 <script>
     function display() {
         const active = document.querySelector('.active');
