@@ -12,6 +12,10 @@
             height: 100%;
             width: 100%;
             font-family: sans-serif;
+            overflow-x: hidden;
+            background-color: lightslategrey;
+            color: #262626;
+            font-weight: bold;
         }
 
         .active {
@@ -35,8 +39,11 @@
             padding: 0 100px;
             font-size: 20px;
         }
-        li {
+        li:not(.li-normal) {
             font-size: 20px;
+        }
+        .li-normal {
+            text-align: left;
         }
 
         nav {
@@ -95,6 +102,7 @@
         table {
             margin: 0 50px;
             border-collapse: collapse;
+            background-color: white;
         }
 
         th {
@@ -560,16 +568,16 @@
             <th>now surround the entire thing in a ul element and each line in li elements</th>
             <th>
                 <ul>
-                    <li>Improves cardiovascular health</li>
-                    <li>Strengthens muscles and joints</li>
-                    <li>Burns calories and aids in weight management</li>
-                    <li>Reduces stress and improves mental health</li>
-                    <li>Boosts mood and overall well-being</li>
-                    <li>Eco-friendly and reduces carbon footprint</li>
-                    <li>Saves money on fuel and transportation costs</li>
-                    <li>Enhances coordination and balance</li>
-                    <li>Provides a low-impact exercise option</li>
-                    <li>Allows exploration of new places and scenic routes</li>
+                    <li class="li-normal">Improves cardiovascular health</li>
+                    <li class="li-normal">Strengthens muscles and joints</li>
+                    <li class="li-normal">Burns calories and aids in weight management</li>
+                    <li class="li-normal">Reduces stress and improves mental health</li>
+                    <li class="li-normal">Boosts mood and overall well-being</li>
+                    <li class="li-normal">Eco-friendly and reduces carbon footprint</li>
+                    <li class="li-normal">Saves money on fuel and transportation costs</li>
+                    <li class="li-normal">Enhances coordination and balance</li>
+                    <li class="li-normal">Provides a low-impact exercise option</li>
+                    <li class="li-normal">Allows exploration of new places and scenic routes</li>
                 </ul>
             </th>
             <th>4o</th>
