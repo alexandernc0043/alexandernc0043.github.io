@@ -1,0 +1,104 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    width: 100%;
+    font-family: sans-serif;
+    overflow-x: hidden;
+    background-color: lightslategrey;
+    color: #262626;
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1; /* Allows main content to take up available space */
+    width: 100%;
+}
+
+footer {
+    background-color: #2f2f2f;
+    height: 5vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-top: auto; /* Push footer to bottom */
+}
+Final HTML Structure
+Make sure your sections are wrapped inside <main>:
+
+html
+Copy
+Edit
+<main>
+    <section id="home">...</section>
+    <section id="about">...</section>
+    <section id="when">...</section>
+    <section id="where">...</section>
+    <section id="how">...</section>
+    <section id="why">...</section>
+    <section id="ai">...</section>
+</main>
+
+<footer>
+    <p>Project for <a href="../">ITIS 3135</a> | Designed by <a href="../alexanderprechteldesigns.com/index.html">Alexander Prechtel Designs</a></p>
+</footer>
+✅ Expected Behavior
+When content is short → The footer stays at the bottom of the page (not floating in the middle).
+When content is long → The footer appears after all content and moves with scrolling (not fixed).
+No overlapping → The footer will never cover content.
+Try this fix and let me know if you need more tweaks! 🚀
+
+
+
+
+
+
+
+You said:
+section {
+            width: 75vw;
+            height: 77vh;
+            max-height: fit-content;
+            display: none;
+            margin-bottom: 100px;
+        }
+ChatGPT said:
+Your current CSS for <section> might be causing issues with the footer because:
+
+Fixed height: 77vh – This forces sections to be tall, which might prevent the footer from properly pushing down.
+display: none; initially – If no section is active at first, the page might not have enough content to push the footer down.
+max-height: fit-content; – This doesn’t work well with height: 77vh, as height overrides max-height.
+Recommended Fix
+To ensure sections only take as much space as they need (instead of forcing height) and let the footer behave correctly, update your section CSS:
+
+css
+Copy
+Edit
+section {
+    width: 75vw;
+    min-height: 50vh; /* Allow content to expand naturally */
+    height: auto; /* Let sections grow as needed */
+    display: none;
+    margin-bottom: 100px;
+}
+Why This Fix Works
+✅ Removes fixed height (height: 77vh), allowing sections to expand based on content.
+✅ Uses min-height: 50vh, ensuring sections still have some minimum height.
+✅ Keeps margin-bottom: 100px, maintaining spacing before the footer.
+✅ Ensures display: none; still works, but when sections are shown, they don’t interfere with the footer.
+Try This
+After applying the fix, check:
+
+If your footer now appears after content and moves naturally.
+If your sections resize properly based on content.
+Let me know if you need further tweaks! 🚀
