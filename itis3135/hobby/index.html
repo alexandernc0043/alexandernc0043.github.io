@@ -37,7 +37,6 @@
             min-height: 100%;
             display: none;
             margin-bottom: 100px;
-            margin-top: 105px;
         }
 
         nav {
@@ -47,9 +46,6 @@
             width: 100vw;
             margin: 0;
             padding: 0;
-            position: fixed;
-            left: 0;
-            top: 0;
             max-height: 750px;
             min-height: 105px;
             font-size: 25px;
@@ -88,6 +84,9 @@
             align-items: center;
             justify-content: center;
             color: white;
+        }
+        h2 {
+            font-size: 30px;
         }
 
         nav ul {
@@ -183,9 +182,8 @@
 <body>
 <header>
     <nav>
-        <h1>Hobby Page</h1>
+        <h1>Alexander Loves Biking</h1>
         <ul>
-            <li><a href="../">ITIS3135</a></li>
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About Me</a></li>
             <li><a href="#when">Best Times</a></li>
@@ -627,20 +625,10 @@
 
 </section>
 <footer>
-    <p>Designed by <a href="../alexanderprechteldesigns.com/index.html">Alexander Prechtel Designs</a></p>
+    <p>Project for <a href="../">ITIS 3135</a> | Designed by <a href="../alexanderprechteldesigns.com/index.html">Alexander Prechtel Designs</a></p>
 </footer>
 <!-- Javascript -->
 <script>
-    const titles = new Map([
-        ['home','Home'],
-        ['about','About'],
-        ['when', 'Best Times'],
-        ['where','Best Locations'],
-        ['how','Learn Biking'],
-        ['why','Why Biking'],
-        ['ai','AI Prompts']
-    ]);
-
     function display() {
         const active = document.querySelector('.active');
         const path = window.location.hash;
@@ -648,15 +636,6 @@
 
         if (active) active.classList.remove('active');
         if (newActive) newActive.classList.add('active');
-
-        const header = document.querySelector('h1');
-        header.textContent = `Hobby Page ~ ${titles.get(path.replace('#',''))}`;
-
-        // const headerSection = path !== '#ai'
-        //     ? path.replace('#', '').charAt(0).toUpperCase() + path.replace('#', '').slice(1) // Will be first letter capital, EX: Hello
-        //     : path.replace('#', '').toUpperCase(); // Will be all capital, EX: AI
-
-        // header.textContent = `Hobby Page ~ ${headerSection}`;
     }
 
     // Run function on page load, to make sure information is correct if page is loaded with hash already.
