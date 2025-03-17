@@ -18,6 +18,12 @@
             font-weight: bold;
         }
 
+        body {
+            flex-direction: column;
+            display: flex;
+            align-items: center;
+        }
+
         .active {
             display: flex;
             flex-direction: column;
@@ -26,7 +32,7 @@
         }
 
         section {
-            width: 100vw;
+            width: 75vw;
             height: 100%;
             min-height: 100%;
             display: none;
@@ -57,7 +63,7 @@
             justify-content: center;
             align-items: center;
             color: white;
-            position: fixed;
+            position: sticky;
             left: 0;
             bottom: 0;
         }
@@ -78,7 +84,7 @@
 
         h1 {
             display: flex;
-            width: 25%;
+            width: 40%;
             align-items: center;
             justify-content: center;
             color: white;
@@ -87,7 +93,7 @@
         nav ul {
             display: flex;
             flex-direction: row;
-            width: 75%;
+            width: 50%;
             justify-content: space-evenly;
             align-items: center;
             list-style: none;
@@ -105,7 +111,6 @@
             padding: 5px;
             border-radius: 10px;
         }
-
 
 
         table {
@@ -183,8 +188,8 @@
             <li><a href="../">ITIS3135</a></li>
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About Me</a></li>
-            <li><a href="#when">When</a></li>
-            <li><a href="#where">Where</a></li>
+            <li><a href="#when">Best Times</a></li>
+            <li><a href="#where">Best Locations</a></li>
             <li><a href="#how">How</a></li>
             <li><a href="#why">Why</a></li>
             <li><a href="#ai">AI Prompts</a></li>
@@ -219,7 +224,7 @@
             <p>Hey there! I’m a biking enthusiast who loves the thrill of the open road and the challenge of new trails.
                 Whether it’s cruising through city streets or tackling rugged mountain paths, cycling is my way of
                 staying active, exploring new places, and clearing my mind. When I’m not on my bike, you can probably
-                find me planning my next ride or discovering new gear to enhance the experience. Let’s ride! 🚴‍♂️</p>
+                find me planning my next ride or discovering new gear to enhance the experience. Let’s ride! 🚴‍♂️</p><br><br>
             <p>Beyond biking, I enjoy the sense of freedom and adventure that comes with being outdoors. There’s
                 something special about the wind in my face, the rhythmic turning of the pedals, and the satisfaction of
                 pushing my limits. I also love connecting with fellow riders, sharing stories, and finding new routes
@@ -235,7 +240,7 @@
     </div>
 </section>
 <section id="when">
-    <h2>When</h2>
+    <h2>Best Times</h2>
     <div>
         <figure>
             <img src="images/When1.jpeg" alt="Someone biking down a road in nice weather.">
@@ -339,8 +344,15 @@
         <img src="images/How.jpeg" alt="Person showing another person how to bike">
         <figcaption>Person showing another person how to bike</figcaption>
     </figure>
-    <p>Learning to bike is a fun and rewarding experience that builds confidence and coordination. To start, find a
-        safe, open area like a park or an empty parking lot. </p>
+    <p>Learning to bike is a fun and rewarding experience that builds confidence, coordination, and a sense of
+        independence. It not only provides a great way to stay active but also allows you to explore your surroundings
+        in an enjoyable and efficient manner. To start, find a safe, open area like a park, an empty parking lot, or a
+        quiet cul-de-sac where you have enough space to practice without obstacles or traffic. Wearing proper safety
+        gear, such as a helmet, knee pads, and elbow pads, is essential to prevent injuries and build confidence while
+        learning. Begin by familiarizing yourself with the bike—adjust the seat to a comfortable height, check the
+        brakes, and ensure the tires are properly inflated. Practicing balancing by walking the bike forward with your
+        feet before gradually transitioning to pedaling can help ease the learning process. With patience, persistence,
+        and a positive attitude, you’ll be riding smoothly in no time!</p>
     <ul>
         <li>Step 1: Adjust the seat so both feet can touch the
             ground for balance.
@@ -593,6 +605,23 @@
             </th>
             <th>4o</th>
         </tr>
+        <tr>
+            <th>Make this paragraph longer "Learning to bike is a fun and rewarding experience that builds confidence
+                and coordination. To start, find a safe, open area like a park or an empty parking lot. "
+            </th>
+            <th>Learning to bike is a fun and rewarding experience that builds confidence, coordination, and a sense of
+                independence. It not only provides a great way to stay active but also allows you to explore your
+                surroundings in an enjoyable and efficient manner. To start, find a safe, open area like a park, an
+                empty parking lot, or a quiet cul-de-sac where you have enough space to practice without obstacles or
+                traffic. Wearing proper safety gear, such as a helmet, knee pads, and elbow pads, is essential to
+                prevent injuries and build confidence while learning. Begin by familiarizing yourself with the
+                bike—adjust the seat to a comfortable height, check the brakes, and ensure the tires are properly
+                inflated. Practicing balancing by walking the bike forward with your feet before gradually transitioning
+                to pedaling can help ease the learning process. With patience, persistence, and a positive attitude,
+                you’ll be riding smoothly in no time!
+            </th>
+            <th>4o</th>
+        </tr>
     </table>
 
 
@@ -602,6 +631,16 @@
 </footer>
 <!-- Javascript -->
 <script>
+    const titles = new Map([
+        ['home','Home'],
+        ['about','About'],
+        ['when', 'Best Times'],
+        ['where','Best Locations'],
+        ['how','Learn Biking'],
+        ['why','Why Biking'],
+        ['ai','AI Prompts']
+    ]);
+
     function display() {
         const active = document.querySelector('.active');
         const path = window.location.hash;
@@ -611,15 +650,22 @@
         if (newActive) newActive.classList.add('active');
 
         const header = document.querySelector('h1');
-        const headerSection = path !== '#ai'
-            ? path.replace('#', '').charAt(0).toUpperCase() + path.replace('#', '').slice(1) // Will be first letter capital, EX: Hello
-            : path.replace('#', '').toUpperCase(); // Will be all capital, EX: AI
+        header.textContent = `Hobby Page ~ ${titles.get(path.replace('#',''))}`;
 
-        header.textContent = `Hobby Page ~ ${headerSection}`;
+        // const headerSection = path !== '#ai'
+        //     ? path.replace('#', '').charAt(0).toUpperCase() + path.replace('#', '').slice(1) // Will be first letter capital, EX: Hello
+        //     : path.replace('#', '').toUpperCase(); // Will be all capital, EX: AI
+
+        // header.textContent = `Hobby Page ~ ${headerSection}`;
     }
 
     // Run function on page load, to make sure information is correct if page is loaded with hash already.
-    document.addEventListener('DOMContentLoaded', display);
+    document.addEventListener('DOMContentLoaded', () => {
+        if (window.location.hash === ''){
+            window.location.hash = '#home';
+        }
+        display();
+    });
     // Run function on hash change.
     window.addEventListener('hashchange', display); //
 </script>
