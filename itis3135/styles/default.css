@@ -173,20 +173,44 @@ main {
     h1 {
         font-size: 20px;
     }
+    nav div ul li a {
+        font-size: 15px;
+    }
+    nav {
+        flex-direction: column;
+    }
+    nav div {
+        flex-direction: column-reverse;
+        max-width: 50%;
+    }
+    main {
+        max-width: 981px;
+    }
 }
 /* Rule Overrides For Tablet Devices */
 @media screen and ( min-width: 601px ) and ( max-width: 980px )  {
-    h1 {
-        font-size: 16px;
+    main {
+        max-width: 80%;
     }
-    nav ul li a {
+    h1 {
+        font-size: 20px;
+    }
+    nav div ul li a {
         font-size: 14px;
     }
+    nav {
+        flex-direction: column;
+    }
+
     nav div {
-        width: 40%;
+        flex-direction: column-reverse;
+
     }
     footer {
         font-size: 14px;
+    }
+    #main nav {
+        padding: 0 10px;
     }
 }
 /* Rule Overrides For Mobile Devices */
@@ -195,14 +219,17 @@ main {
         flex-direction: column;
     }
     h1 {
-        font-size: 16px;
+        font-size: 12px;
     }
-    nav ul li a {
+    nav div ul li a {
         font-size: 14px;
     }
     nav div {
-        width: 75%;
+        max-width: 75%;
         flex-direction: column-reverse;
+    }
+    main {
+        max-width: 80%;
     }
     #main {
         display: none;
