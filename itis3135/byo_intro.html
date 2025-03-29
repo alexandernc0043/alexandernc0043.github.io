@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Alexander Prechtel's Advanced Pegasus ★ ITIS 3135 ★ BYO</title>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles/default.css">
+    <link rel="stylesheet" href="styles/byo_intro.css">
+</head>
+<body>
+
+<div data-include="components/navbar.html"></div>
+<div data-replace="%text%:Bring your own Introduction" data-include="components/header.html"></div>
+
+<main>
+    <h3>Time to BYO Intro page, please fill out the form below so we can create your own page.</h3>
+
+    <form>
+        <label for="name">Name: </label>
+        <input type="text" id="name">
+
+        <label for="mascot">Mascot: </label>
+        <input type="text" id="mascot">
+
+        <label for="image">Image: </label>
+        <input type="file" id="image" accept="image/png, image/jpeg, image/jpg">
+
+        <label for="image-caption">Image Caption: </label>
+        <input type="text" id="image-caption">
+
+        <label for="personal-background">Personal Background: </label>
+        <input type="text" id="personal-background">
+
+        <label for="professional-background">Professional Background: </label>
+        <input type="text" id="professional-background">
+
+        <label for="academic-background">Academic Background</label>
+        <input type="text" id="academic-background">
+
+        <label for="background-web-dev">Background in Web Development: </label>
+        <input type="text" id="background-web-dev">
+
+        <label for="computer">Primary Computer Platform: </label>
+        <input type="text" id="computer">
+
+        <label>Courses Taking: </label>
+        <div id="courses-taking"></div>
+        <button id="add-class" type="button">Add Class</button>
+
+
+        <label for="funny-thing">Funny Thing: </label>
+        <input type="text" id="funny-thing">
+
+        <label for="anything">Anything Else: </label>
+        <input type="text" id="anything">
+
+        <div>
+            <label for="agreement">Agreement</label>
+            <input type="checkbox" id="agreement">
+            <p>
+                "I understand that what is on this page is not password protected and I will not
+                put anything here that I don’t want publicly available."
+            </p>
+        </div>
+
+        <div style="align-self: center">
+            <button id="btn-submit" type="button">Submit Form</button>
+            <button id="btn-reset" type="button">Reset Form</button>
+        </div>
+    </form>
+    <div id="output"></div>
+</main>
+
+<div data-include="components/footer.html"></div>
+<script src="scripts/HTMLInclude.js"></script>
+<script src="scripts/survey.js"></script>
+</body>
+</html>
