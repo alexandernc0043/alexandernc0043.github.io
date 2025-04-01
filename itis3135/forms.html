@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alexander Prechtel's Advanced Pegasus ★ ITIS 3135 ★ Form</title>
+    <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="styles/default.css">
+    <style>
+        main {
+            background: var(--lightgrey);
+            border-radius: 15px;
+            padding: 20px;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+        }
+        h2 {
+            text-align: center;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            max-width: 30%;
+        }
+
+        form div {
+            padding-bottom: 10px;
+        }
+        input {
+            background: var(--darkgrey);
+            color: white;
+            border: var(--darkgrey) 5px solid;
+            border-radius: 5px;
+        }
+        ::placeholder {
+            color: var(--lightgrey);
+        }
+
+    </style>
+</head>
+
+<body>
+<div data-include="components/navbar.html"></div>
+
+
+<main>
+    <h2>Extra Credit Forms</h2>
+    <form id="form" action="#" onsubmit="false;">
+        <h3>Form</h3>
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" required placeholder="John Doe">
+        </div>
+
+        <div>
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" placeholder="123-456-7890" pattern="^[1-9]\d{2}-\d{3}-\d{4}" required>
+        </div>
+
+        <div>
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="example@example.com" required>
+        </div>
+
+        <div>
+            <label for="checkbox">Checkbox:</label>
+            <input type="checkbox" id="checkbox" required>
+        </div>
+
+        <div>
+            <fieldset id="radio-button">
+                <legend>Radio Options:</legend>
+                <label>
+                    <input type="radio" name="radioGroup" value="Radio 1" checked> Radio 1
+                </label>
+                <br>
+                <label>
+                    <input type="radio" name="radioGroup" value="Radio 2"> Radio 2
+                </label>
+                <br>
+                <label>
+                    <input type="radio" name="radioGroup" value="Radio 3"> Radio 3
+                </label>
+            </fieldset>
+
+        </div>
+
+        <div>
+            <label for="select">Drop Down:</label>
+            <select id="select">
+                <option value="1">Option 1</option>
+                <option value="2">Option 2</option>
+                <option value="3">Option 3</option>
+            </select>
+        </div>
+        <div>
+            <button type="submit" id="btn-submit">Submit</button>
+            <button type="reset" id="btn-reset">Reset</button>
+        </div>
+    </form>
+    <div id="output"></div>
+</main>
+<div data-include="components/footer.html"></div>
+<script src="scripts/HTMLInclude.js"></script>
+<script>
+    const form = document.getElementById('form');
+    const name = document.getElementById('name');
+    const phone = document.getElementById('phone');
+    const email = document.getElementById('email');
+    const checkbox = document.getElementById('checkbox');
+    const radioButtons = document.getElementsByName('radioGroup');
+    const dropDown = document.getElementById('select');
+    const submitButton = document.getElementById('btn-submit');
+    const resetButton = document.getElementById('btn-reset');
+    const outputDiv = document.getElementById('output');
+    let selectedRadio;
+    for (const radio of radioButtons) {
+        if (radio.checked) {
+            selectedRadio = radio.value;
+            break;
+        }
+    }
+    submitButton.addEventListener('click', (event) => {
+        event.preventDefault();
+        if (!form.checkValidity()) {
+            form.reportValidity();
+            return;
+        }
+        outputDiv.innerHTML = `
+<h3>Output</h3>
+<ul>
+<li>Name: ${name.value}</li>
+<li>Phone: ${phone.value}</li>
+<li>Email: ${email.value}</li>
+<li>Checked: ${checkbox.value}</li>
+<li>Radio: ${selectedRadio}</li>
+<li>DropDown: ${dropDown.value}</li>
+</ul>
+`;
+    });
+    resetButton.addEventListener('click', () => outputDiv.innerHTML = '');
+</script>
+</body>
+
+</html>
