@@ -11,38 +11,45 @@
 <body>
 
 <div data-include="components/navbar.html"></div>
-<div data-replace="%text%:Bring your own Introduction" data-include="components/header.html"></div>
-
 <main>
-    <h3>Time to BYO Intro page, please fill out the form below so we can create your own page.</h3>
+    <form id="byo-form">
+        <h2>Bring Your Own Introduction</h2>
+        <h3>Time to BYO Intro page, please fill out the form below so we can create your own page.</h3>
+        <label for="first-name">First Name: </label>
+        <input type="text" id="first-name" value="Alexander">
 
-    <form>
-        <label for="name">Name: </label>
-        <input type="text" id="name">
+        <label for="middle-initial">Middle Initial: </label>
+        <input type="text" id="middle-initial" value="J" maxlength="1">
+
+        <label for="last-name">Last Name: </label>
+        <input type="text" id="last-name" value="Prechtel">
+
+        <label for="nick-name">Last Name: </label>
+        <input type="text" id="nick-name" value="Alex">
 
         <label for="mascot">Mascot: </label>
-        <input type="text" id="mascot">
+        <input type="text" id="mascot" value="Advanced Pegasus">
 
         <label for="image">Image: </label>
         <input type="file" id="image" accept="image/png, image/jpeg, image/jpg">
 
         <label for="image-caption">Image Caption: </label>
-        <input type="text" id="image-caption">
+        <input type="text" id="image-caption" value="At the beach on the eastern coast of Florida (2024)">
 
         <label for="personal-background">Personal Background: </label>
-        <input type="text" id="personal-background">
+        <input type="text" id="personal-background" value="Grew up north of Charlotte, and have always had a love of computers.">
 
         <label for="professional-background">Professional Background: </label>
-        <input type="text" id="professional-background">
+        <input type="text" id="professional-background" value="None.">
 
         <label for="academic-background">Academic Background</label>
-        <input type="text" id="academic-background">
+        <input type="text" id="academic-background" value="Sophomore and Cybersecurity major at UNCC.">
 
         <label for="background-web-dev">Background in Web Development: </label>
-        <input type="text" id="background-web-dev">
+        <input type="text" id="background-web-dev" value="N/A">
 
         <label for="computer">Primary Computer Platform: </label>
-        <input type="text" id="computer">
+        <input type="text" id="computer" value="Windows (Custom built desktop), MacOS (Macbook)">
 
         <label>Courses Taking: </label>
         <div id="courses-taking"></div>
@@ -50,26 +57,26 @@
 
 
         <label for="funny-thing">Funny Thing: </label>
-        <input type="text" id="funny-thing">
+        <input type="text" id="funny-thing" value="N/A">
 
         <label for="anything">Anything Else: </label>
-        <input type="text" id="anything">
+        <input type="text" id="anything" value="N/A">
 
         <div>
             <label for="agreement">Agreement</label>
-            <input type="checkbox" id="agreement">
+            <input type="checkbox" id="agreement" checked>
             <p>
                 "I understand that what is on this page is not password protected and I will not
                 put anything here that I don’t want publicly available."
             </p>
         </div>
-
         <div style="align-self: center">
             <button id="btn-submit" type="button">Submit Form</button>
             <button id="btn-reset" type="button">Reset Form</button>
         </div>
     </form>
     <div id="output"></div>
+
 </main>
 
 <div data-include="components/footer.html"></div>

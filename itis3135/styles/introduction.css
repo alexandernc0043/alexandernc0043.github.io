@@ -1,9 +1,9 @@
 main {
-    max-width: 800px;
     background-color: var(--lightgrey);
     padding: 30px;
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
     border-radius: 10px;
     margin: auto auto 5vh;
@@ -11,13 +11,34 @@ main {
 img {
     border-radius: 10px;
 }
-i {
-    margin-top: 10px;
+figure {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+figcaption {
     text-align: center;
+    margin: 10px 0 0 0;
 }
 footer {
     position: relative;
 }
 main li {
     font-weight: bold;
+}
+h3 {
+    text-align: center;
+    font-size: 150%;
+}
+h2 {
+    text-align: center;
+    margin: 0;
+}
+strong {
+    color: #2276a0;
+    font-weight: bold;
+}
+ul {
+    padding-left: 0;
 }
