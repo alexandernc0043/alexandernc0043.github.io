@@ -1,0 +1,36 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: pink;
+}
+header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    background-color: lightblue;
+}
+h1 {
+    width: 50%;
+    border: 1px solid black;
+}
+#basics-dropdown, #applications-dropdown {
+    display: none;
+    flex-direction: column;
+    position: fixed;
+    border: 1px solid black;
+    width: 100px;
+    height: 100px;
+}
+nav {
+    width: 50%;
+}
+nav ol {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    list-style: none;
+}
