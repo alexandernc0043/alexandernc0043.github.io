@@ -20,10 +20,11 @@ h1 {
     width: 50%;
 }
 
-h2 {
+nav div p {
     background-color: #04AA6D;
-    padding: 16px;
+    padding: 12px;
     border-radius: 15px;
+    font-size: 25px;
 }
 
 #basics, #applications {
@@ -56,7 +57,7 @@ nav div {
     flex-direction: column;
     align-items: flex-start;
     position: absolute;
-    top: calc(75% + 5px);
+    top: calc(75% + 1px);
     left: 0;
     z-index: 1;
     width: 100%;
@@ -90,7 +91,7 @@ nav div {
     border-bottom-right-radius: 0;
 }
 
-.drop-down:hover h2 {
+.drop-down:hover p {
     border-bottom-left-radius: 0;
     border-bottom-right-radius: 0;
 }
