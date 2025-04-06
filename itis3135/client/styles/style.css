@@ -65,6 +65,6 @@ footer {
     left: 0;
     bottom: 0;
 }
-footer p {
+footer p, footer a{
     color: var(--biege);
 }
