@@ -20,7 +20,7 @@ nav div p {
     text-align: center;
 }
 
-nav div p, nav div button {
+nav div p, nav div a {
     color: var(--biege);
 }
 
@@ -66,21 +66,21 @@ nav div {
     display: flex;
 }
 
-.drop-down-links button {
+.drop-down-links a {
     padding: 20px 0 20px 20px;
-    width: 100%;
+    width: calc(100% - 20px);
     font-size: 20px;
     text-align: left;
     text-decoration: none;
     color: black;
 }
 
-.drop-down-links button:last-child:hover {
+.drop-down-links a:last-child:hover {
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px;
 }
 
-.drop-down-links button:hover {
+.drop-down-links a:hover {
     background-color: white;
 }
 

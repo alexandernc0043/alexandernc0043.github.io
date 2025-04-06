@@ -1,27 +1,25 @@
 <header>
     <h1>
-        <button onclick="load(mainLinks.index)">Learn Kotlin!</button>
+        <a id="learn">Learn Kotlin!</a>
     </h1>
     <nav>
         <div id="basics" class="drop-down">
             <p class="link">Basics</p>
             <div id="basics-dropdown" class="drop-down-links">
-                <button onclick="load(basicLinks.variables)">Variables</button>
-                <button onclick="load(basicLinks.types)">Types</button>
-                <button onclick="load(basicLinks.functions)">Functions</button>
-                <button onclick="load(basicLinks.classes)">Classes</button>
+                <a id="variables">Variables</a>
+                <a id="types">Types</a>
+                <a id="functions">Functions</a>
+                <a id="classes">Classes</a>
             </div>
         </div>
         <div id="resources">
-            <p class="link">
-                <button onclick="load(mainLinks.resources)">Resources</button>
-            </p>
+            <p class="link">Resources</p>
         </div>
         <div id="applications" class="drop-down">
             <p class="link">Applications</p>
             <div id="applications-dropdown" class="drop-down-links">
-                <button onclick="load(applicationLinks.kmp)">Kotlin Multiplatform</button>
-                <button onclick="load(applicationLinks.android)">Android Applications</button>
+                <a id="kmp">Kotlin Multiplatform</a>
+                <a id="android">Android Applications</a>
             </div>
         </div>
     </nav>
