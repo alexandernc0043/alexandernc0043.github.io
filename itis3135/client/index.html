@@ -10,9 +10,67 @@
 <body>
 <div data-include="components/header.html"></div>
 <main>
-    <p>hello world</p>
+    <h2>Introduction to Kotlin</h2>
+    <figure>
+        <img src="../images/Kodee_Assets_Digital_Kodee-waving.png" alt="Kodee, the Kotlin Mascot">
+        <figcaption style="text-align: center">Kodee, the Kotlin Mascot</figcaption>
+    </figure>
+    <div id="info">
+        <h3>What is Kotlin?</h3>
+        <p>Kotlin is a modern, statically typed programming language developed by <a href="https://www.jetbrains.com/">JetBrains</a>.
+            It was designed with a
+            focus on conciseness, safety, and interoperability, particularly with Java. Here are some key aspects of
+            Kotlin:</p>
+        <ul>
+            <li>
+                <strong>Conciseness and Readability: </strong>Kotlin’s syntax is streamlined, reducing boilerplate code
+                compared to Java
+                and other languages.
+            </li>
+            <li>
+                <strong>Null Safety: </strong>The language includes features that help prevent common programming
+                errors, such as null pointer exceptions, by distinguishing between nullable and non-nullable types.
+            </li>
+            <li>
+                <strong>Interoperability:</strong> Kotlin is fully interoperable with Java, which means you can call
+                Java code from
+                Kotlin and vice versa. This makes it easier to gradually integrate Kotlin into existing Java projects.
+            </li>
+            <li>
+                <strong>Multi-Platform Support: </strong>Beyond running on the Java Virtual Machine (JVM), Kotlin can
+                compile to
+                JavaScript for web development and to native binaries for platforms like iOS and desktop, through
+                Kotlin/Native.
+            </li>
+            <li>
+                <strong>Support for Multiple Paradigms: </strong>It supports both object-oriented and functional
+                programming styles,
+                offering flexibility for different coding approaches.
+            </li>
+            <li>
+                <strong>Android Development: </strong>Google endorsed Kotlin as a first-class language for Android
+                development in 2017,
+                which has contributed to its widespread adoption in mobile app development.
+            </li>
+        </ul>
+        <p>Overall, Kotlin offers modern language features and enhanced productivity, making it a popular choice for
+            developing a wide range of applications from server-side software to mobile apps.</p>
+    </div>
+    <pre>
+        <code>
+fun main() {
+    println("Hello World!");
+}
+    </code>
+Note: semicolons are optional in Kotlin.
+
+    </pre>
+    <div data-include="components/footer.html"></div>
 </main>
 <script src="script.js"></script>
 <script src="../scripts/HTMLInclude.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
 </body>
 </html>

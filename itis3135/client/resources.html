@@ -3,41 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Client Project</title>
+    <title>Kotlin Resources</title>
     <link rel="stylesheet" href="styles/style.css">
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<header>
-    <h1><a href="index.html">Learn Kotlin!</a></h1>
-    <nav>
-        <div id="basics" class="drop-down">
-            <p>Basics</p>
-            <div id="basics-dropdown" class="drop-down-links">
-                <a href="basics/index.html">Introduction</a>
-                <a href="basics/variables.html">Variables</a>
-                <a href="basics/types.html">Types</a>
-                <a href="basics/functions.html">Functions</a>
-                <a href="basics/classes.html">Classes</a>
-            </div>
-        </div>
-        <div>
-            <p><a href="resources.html">Resources</a></p>
-        </div>
-        <div id="applications" class="drop-down">
-            <p>Applications</p>
-            <div id="applications-dropdown" class="drop-down-links">
-
-                <a href="applications/index.html">Introduction</a>
-                <a href="applications/kmp.html">Kotlin Multiplatform</a>
-                <a href="applications/android.html">Android Applications</a>
-            </div>
-        </div>
-    </nav>
-</header>
+<div data-include="components/header.html"></div>
 <main>
-    <p>resources</p>
+    <h2>Kotlin Resources</h2>
+    <div id="info">
+        <h3>Explore and Learn Kotlin</h3>
+        <p>Welcome to the Kotlin Resources page! Here you will find a curated list of resources to help you learn and master Kotlin, whether you’re a beginner or an experienced developer.</p>
+        <ul>
+            <li>
+                <a href="https://kotlinlang.org/docs/home.html" target="_blank">
+                    Official Kotlin Documentation
+                </a>
+                – A comprehensive guide covering everything from basic syntax to advanced features.
+            </li>
+            <li>
+                <a href="https://kotlinlang.org/docs/reference/" target="_blank">
+                    Kotlin Reference
+                </a>
+                – Detailed reference material on all aspects of the language.
+            </li>
+            <li>
+                <a href="https://www.jetbrains.com/kotlin/" target="_blank">
+                    JetBrains Kotlin
+                </a>
+                – The official site from JetBrains, featuring news, updates, and community projects.
+            </li>
+            <li>
+                <a href="https://play.kotlinlang.org/" target="_blank">
+                    Kotlin Playground
+                </a>
+                – An interactive online environment where you can write, run, and share Kotlin code.
+            </li>
+            <li>
+                <a href="https://www.udemy.com/topic/kotlin/" target="_blank">
+                    Kotlin Courses on Udemy
+                </a>
+                – A range of courses from beginner to advanced levels to boost your Kotlin skills.
+            </li>
+            <li>
+                <a href="https://www.youtube.com/results?search_query=kotlin+tutorial" target="_blank">
+                    Kotlin Tutorials on YouTube
+                </a>
+                – Video tutorials for visual learners, covering a variety of Kotlin topics.
+            </li>
+        </ul>
+        <p>These resources are designed to help you build a strong foundation in Kotlin and keep you updated with the latest developments in the language.</p>
+    </div>
 </main>
+<div data-include="components/footer.html"></div>
 <script src="script.js"></script>
+<script src="../scripts/HTMLInclude.js"></script>
 </body>
 </html>

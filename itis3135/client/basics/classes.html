@@ -8,36 +8,72 @@
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<header>
-    <h1><a href="../index.html">Learn Kotlin!</a></h1>
-    <nav>
-        <div id="basics" class="drop-down">
-            <p>Basics</p>
-            <div id="basics-dropdown" class="drop-down-links">
-                <a href="../basics/index.html">Introduction</a>
-                <a href="../basics/variables.html">Variables</a>
-                <a href="../basics/types.html">Types</a>
-                <a href="../basics/functions.html">Functions</a>
-                <a href="../basics/classes.html">Classes</a>
-            </div>
-        </div>
-        <div>
-            <p><a href="../resources.html">Resources</a></p>
-        </div>
-        <div id="applications" class="drop-down">
-            <p>Applications</p>
-            <div id="applications-dropdown" class="drop-down-links">
-
-                <a href="../applications/index.html">Introduction</a>
-                <a href="../applications/kmp.html">Kotlin Multiplatform</a>
-                <a href="../applications/android.html">Android Applications</a>
-            </div>
-        </div>
-    </nav>
-</header>
+<div data-include="../components/header.html"></div>
 <main>
-    <p>Basics classes</p>
+    <h2>Classes in Kotlin</h2>
+    <div id="info">
+        <h3>Understanding Classes in Kotlin</h3>
+        <p>Kotlin's class system is designed to simplify object-oriented programming while providing powerful features such as concise syntax, primary constructors, and data classes.</p>
+        <ul>
+            <li>
+                <strong>Class Declaration:</strong>
+                Classes in Kotlin are declared using the <strong>class</strong> keyword followed by the class name. The primary constructor can be defined in the class header.
+            </li>
+            <li>
+                <strong>Properties and Initializers:</strong>
+                Classes can have properties and initializer blocks (<strong>init</strong>) that run when an instance is created, allowing you to set up initial state.
+            </li>
+            <li>
+                <strong>Data Classes:</strong>
+                Data classes automatically generate <strong>equals()</strong>, <strong>hashCode()</strong>, and <strong>toString()</strong> functions, making them ideal for storing data.
+            </li>
+            <li>
+                <strong>Inheritance:</strong>
+                By default, classes in Kotlin are final. To allow inheritance, mark a class with the <code>open</code> keyword.
+            </li>
+            <li>
+                <strong>Secondary Constructors:</strong>
+                In addition to the primary constructor, classes can have secondary constructors for additional initialization logic.
+            </li>
+        </ul>
+        <p>Kotlin's class features promote clarity and reduce boilerplate, enabling developers to write robust object-oriented code efficiently.</p>
+    </div>
+    <pre>
+        <code>
+class Person(val name: String, var age: Int) {
+    // Initializer block executes when an instance is created
+    init {
+        println("Person created: $name, age: $age")
+    }
+
+    // Member function to update age
+    fun celebrateBirthday() {
+        age++
+        println("Happy birthday, $name! Now you are $age years old.")
+    }
+}
+
+// Data class for storing book information
+data class Book(val title: String, val author: String)
+
+fun main() {
+    // Create an instance of Person and celebrate a birthday
+    val person = Person("Alice", 30)
+    person.celebrateBirthday()
+
+    // Create an instance of Book and print its details
+    val book = Book("1984", "George Orwell")
+    println(book)
+}
+        </code>
+    </pre>
 </main>
+<div data-include="../components/footer.html"></div>
+
 <script src="../script.js"></script>
+<script src="../../scripts/HTMLInclude.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
 </body>
 </html>

@@ -3,41 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Client Project</title>
+    <title>Android Applications in Kotlin</title>
     <link rel="stylesheet" href="../styles/style.css">
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<header>
-    <h1><a href="../index.html">Learn Kotlin!</a></h1>
-    <nav>
-        <div id="basics" class="drop-down">
-            <p>Basics</p>
-            <div id="basics-dropdown" class="drop-down-links">
-                <a href="../basics/index.html">Introduction</a>
-                <a href="../basics/variables.html">Variables</a>
-                <a href="../basics/types.html">Types</a>
-                <a href="../basics/functions.html">Functions</a>
-                <a href="../basics/classes.html">Classes</a>
-            </div>
-        </div>
-        <div>
-            <p><a href="../resources.html">Resources</a></p>
-        </div>
-        <div id="applications" class="drop-down">
-            <p>Applications</p>
-            <div id="applications-dropdown" class="drop-down-links">
-
-                <a href="../applications/index.html">Introduction</a>
-                <a href="../applications/kmp.html">Kotlin Multiplatform</a>
-                <a href="../applications/android.html">Android Applications</a>
-            </div>
-        </div>
-    </nav>
-</header>
+<div data-include="../components/header.html"></div>
 <main>
-    <p>Basics variables</p>
+    <h2>Android Applications in Kotlin</h2>
+    <div id="info">
+        <h3>Building Android Applications with Kotlin</h3>
+        <p>Kotlin has become the preferred language for Android development due to its concise syntax, robust safety
+            features, and seamless interoperability with Java. Using Kotlin, developers can build modern, efficient, and
+            reliable Android apps with less boilerplate code.</p>
+        <ul>
+            <li>
+                <strong>Concise Syntax:</strong>
+                Kotlin's modern syntax reduces verbosity, making your code easier to read and maintain.
+            </li>
+            <li>
+                <strong>Null Safety:</strong>
+                With built-in null safety, Kotlin helps prevent common runtime errors like null pointer exceptions.
+            </li>
+            <li>
+                <strong>Interoperability:</strong>
+                Kotlin integrates effortlessly with Java, allowing you to use existing libraries and frameworks in your
+                Android projects.
+            </li>
+            <li>
+                <strong>Coroutines:</strong>
+                Kotlin coroutines simplify asynchronous programming, making it easier to handle background tasks and
+                improve app performance.
+            </li>
+            <li>
+                <strong>Modern Android APIs:</strong>
+                Kotlin is well-supported by modern Android libraries and frameworks, including Jetpack components and
+                Compose for building native UIs.
+            </li>
+        </ul>
+        <p>By leveraging Kotlin's powerful features, developers can create high-performance Android applications that
+            are both robust and enjoyable to develop.</p>
+    </div>
+    <h3>Example: Simple Android Activity in Kotlin</h3>
+    <pre>
+        <code>
+import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
+
+class MainActivity : AppCompatActivity() {
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_main)
+    }
+}
+        </code>
+    </pre>
+    <p>This example demonstrates a basic Android activity written in Kotlin. The <strong>MainActivity</strong> class
+        extends <strong>AppCompatActivity</strong>, and the <strong>onCreate</strong> method sets the content view using
+        a layout resource.</p>
+    <div data-include="../components/footer.html"></div>
 </main>
 <script src="../script.js"></script>
+<script src="../../scripts/HTMLInclude.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
 </body>
 </html>

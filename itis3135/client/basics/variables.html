@@ -8,36 +8,57 @@
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<header>
-    <h1><a href="../index.html">Learn Kotlin!</a></h1>
-    <nav>
-        <div id="basics" class="drop-down">
-            <p>Basics</p>
-            <div id="basics-dropdown" class="drop-down-links">
-                <a href="../basics/index.html">Introduction</a>
-                <a href="../basics/variables.html">Variables</a>
-                <a href="../basics/types.html">Types</a>
-                <a href="../basics/functions.html">Functions</a>
-                <a href="../basics/classes.html">Classes</a>
-            </div>
-        </div>
-        <div>
-            <p><a href="../resources.html">Resources</a></p>
-        </div>
-        <div id="applications" class="drop-down">
-            <p>Applications</p>
-            <div id="applications-dropdown" class="drop-down-links">
-
-                <a href="../applications/index.html">Introduction</a>
-                <a href="../applications/kmp.html">Kotlin Multiplatform</a>
-                <a href="../applications/android.html">Android Applications</a>
-            </div>
-        </div>
-    </nav>
-</header>
+<div data-include="../components/header.html"></div>
 <main>
-    <p>Basics variables</p>
+    <h2>Variables to Kotlin</h2>
+    <div id="info">
+        <h3>Understanding Variables in Kotlin</h3>
+        <p>Kotlin provides two primary keywords for declaring variables: <strong>val</strong> and <strong>var</strong>.
+            These keywords help you manage mutability in your code.</p>
+        <ul>
+            <li>
+                <strong>val (Immutable Variable):</strong>
+                Declaring a variable with <strong>val</strong> means its value cannot be changed once assigned. This is
+                similar to a final variable in Java, which promotes safety and predictability.
+            </li>
+            <li>
+                <strong>var (Mutable Variable):</strong>
+                Use var when you need a variable whose value can change over time. This is useful when the state of the
+                variable needs to be updated.
+            </li>
+            <li>
+                <strong>Type Inference:</strong>
+                Kotlin’s compiler automatically infers the type of a variable from its initializer, which means you can
+                often omit explicit type declarations.
+            </li>
+            <li>
+                <strong>Declaration and Initialization:</strong>
+                Variables can be declared and initialized in a single statement. For <strong>var</strong> variables, you
+                can also declare them first and initialize them later.
+            </li>
+            <li>
+                <strong>Smart Casting:</strong>
+                Kotlin can automatically cast variables to the appropriate type after certain checks, reducing the need
+                for explicit casting.
+            </li>
+        </ul>
+        <p>By choosing between <strong>val</strong> and <strong>var</strong>, Kotlin developers can write safer, more
+            concise code that emphasizes immutability when possible and allows mutability when needed.</p>
+    </div>
+    <pre>
+        <code>
+var number = 1 // Can Change
+val number2 = 3 // Cannot Change
+    </code>
+    </pre>
+
+    <div data-include="../components/footer.html"></div>
+
 </main>
 <script src="../script.js"></script>
+<script src="../../scripts/HTMLInclude.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
 </body>
 </html>

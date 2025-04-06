@@ -8,36 +8,69 @@
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<header>
-    <h1><a href="../index.html">Learn Kotlin!</a></h1>
-    <nav>
-        <div id="basics" class="drop-down">
-            <p>Basics</p>
-            <div id="basics-dropdown" class="drop-down-links">
-                <a href="../basics/index.html">Introduction</a>
-                <a href="../basics/variables.html">Variables</a>
-                <a href="../basics/types.html">Types</a>
-                <a href="../basics/functions.html">Functions</a>
-                <a href="../basics/classes.html">Classes</a>
-            </div>
-        </div>
-        <div>
-            <p><a href="../resources.html">Resources</a></p>
-        </div>
-        <div id="applications" class="drop-down">
-            <p>Applications</p>
-            <div id="applications-dropdown" class="drop-down-links">
-
-                <a href="../applications/index.html">Introduction</a>
-                <a href="../applications/kmp.html">Kotlin Multiplatform</a>
-                <a href="../applications/android.html">Android Applications</a>
-            </div>
-        </div>
-    </nav>
-</header>
+<div data-include="../components/header.html"></div>
 <main>
-    <p>Basics types</p>
+    <h2>Types in Kotlin</h2>
+    <div id="info">
+        <h3>Understanding Types in Kotlin</h3>
+        <p>Kotlin is a statically typed language, which means that the type of every variable and expression is
+            determined at compile time. Its type system is designed for safety and expressiveness, ensuring that many
+            common errors are caught early.</p>
+        <ul>
+            <li>
+                <strong>Static Typing:</strong>
+                Kotlin enforces static typing, meaning all types are known during compilation. This helps catch
+                type-related errors before the code runs.
+            </li>
+            <li>
+                <strong>Type Inference:</strong>
+                The Kotlin compiler can automatically infer the type of a variable from its initializer, reducing the
+                need for explicit type annotations and making the code cleaner.
+            </li>
+            <li>
+                <strong>Nullable and Non-nullable Types:</strong>
+                Kotlin differentiates between nullable and non-nullable types. This feature forces you to explicitly
+                handle null values, reducing the likelihood of null pointer exceptions.
+            </li>
+            <li>
+                <strong>Unified Type System:</strong>
+                In Kotlin, even primitive types like <code>Int</code>, <code>Double</code>, and <code>Boolean</code> are
+                treated as objects, providing a consistent type system that simplifies development.
+            </li>
+            <li>
+                <strong>Custom Types:</strong>
+                Beyond built-in types, Kotlin supports creating custom types through classes, data classes, enums, and
+                sealed classes, enabling you to model complex domains effectively.
+            </li>
+        </ul>
+        <p>The strong and expressive type system in Kotlin not only increases safety by preventing type errors but also
+            enhances readability and maintainability of your code.</p>
+    </div>
+
+    <pre>
+        <code>
+    val inferredInt = 42           // Inferred as Int
+    val inferredDouble = 3.14      // Inferred as Double
+    val inferredString = "Kotlin"  // Inferred as String
+    val inferredBoolean = true     // Inferred as Boolean
+
+
+    // Static types: Explicit type declarations.
+    val staticInt: Int = 100
+    val staticDouble: Double = 2.718
+    val staticString: String = "Hello, Kotlin"
+    val staticBoolean: Boolean = false
+    val staticNullableString: String? = null // Explicitly nullable String
+    </code>
+    </pre>
+
+    <div data-include="../components/footer.html"></div>
+
 </main>
 <script src="../script.js"></script>
+<script src="../../scripts/HTMLInclude.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
 </body>
 </html>

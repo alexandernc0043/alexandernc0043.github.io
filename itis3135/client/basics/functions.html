@@ -8,36 +8,56 @@
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<header>
-    <h1><a href="../index.html">Learn Kotlin!</a></h1>
-    <nav>
-        <div id="basics" class="drop-down">
-            <p>Basics</p>
-            <div id="basics-dropdown" class="drop-down-links">
-                <a href="../basics/index.html">Introduction</a>
-                <a href="../basics/variables.html">Variables</a>
-                <a href="../basics/types.html">Types</a>
-                <a href="../basics/functions.html">Functions</a>
-                <a href="../basics/classes.html">Classes</a>
-            </div>
-        </div>
-        <div>
-            <p><a href="../resources.html">Resources</a></p>
-        </div>
-        <div id="applications" class="drop-down">
-            <p>Applications</p>
-            <div id="applications-dropdown" class="drop-down-links">
-
-                <a href="../applications/index.html">Introduction</a>
-                <a href="../applications/kmp.html">Kotlin Multiplatform</a>
-                <a href="../applications/android.html">Android Applications</a>
-            </div>
-        </div>
-    </nav>
-</header>
+<div data-include="../components/header.html"></div>
 <main>
-    <p>Basics functions</p>
+    <h2>Functions in Kotlin</h2>
+    <div id="info">
+        <h3>Understanding Functions in Kotlin</h3>
+        <p>Kotlin functions are declared using the <code>fun</code> keyword. They are versatile and can be defined with parameters, return types, default values, and even as single-expression functions for concise code.</p>
+        <ul>
+            <li>
+                <strong>Function Declaration:</strong>
+                Functions are declared with the <code>fun</code> keyword followed by the function name, a parameter list, and an optional return type.
+            </li>
+            <li>
+                <strong>Parameters and Return Types:</strong>
+                You can define parameters with their types and specify a return type. If a function does not return a meaningful value, it returns <code>Unit</code>.
+            </li>
+            <li>
+                <strong>Default Arguments:</strong>
+                Functions can provide default values for parameters, reducing the need for multiple overloads.
+            </li>
+            <li>
+                <strong>Single-Expression Functions:</strong>
+                For simple operations, you can write functions as single expressions without curly braces or an explicit <code>return</code> statement.
+            </li>
+            <li>
+                <strong>Higher-Order Functions:</strong>
+                Kotlin supports passing functions as arguments and returning them, allowing for functional programming techniques.
+            </li>
+        </ul>
+        <p>Kotlin's function features allow you to write clean, efficient, and expressive code that can handle a variety of programming tasks.</p>
+    </div>
+    <pre>
+        <code>
+fun greet(name: String): String {
+    return "Hello, $name!"
+}
+
+fun add(a: Int, b: Int): Int = a + b  // Single-expression function
+
+fun printGreeting(name: String = "Kotlin User") {
+    println(greet(name))
+}
+        </code>
+    </pre>
 </main>
+<div data-include="../components/footer.html"></div>
+
 <script src="../script.js"></script>
+<script src="../../scripts/HTMLInclude.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
 </body>
 </html>

@@ -3,41 +3,57 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Client Project</title>
+    <title>Kotlin Multiplatform (KMP)</title>
     <link rel="stylesheet" href="../styles/style.css">
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<header>
-    <h1><a href="../index.html">Learn Kotlin!</a></h1>
-    <nav>
-        <div id="basics" class="drop-down">
-            <p>Basics</p>
-            <div id="basics-dropdown" class="drop-down-links">
-                <a href="../basics/index.html">Introduction</a>
-                <a href="../basics/variables.html">Variables</a>
-                <a href="../basics/types.html">Types</a>
-                <a href="../basics/functions.html">Functions</a>
-                <a href="../basics/classes.html">Classes</a>
-            </div>
-        </div>
-        <div>
-            <p><a href="../resources.html">Resources</a></p>
-        </div>
-        <div id="applications" class="drop-down">
-            <p>Applications</p>
-            <div id="applications-dropdown" class="drop-down-links">
-
-                <a href="../applications/index.html">Introduction</a>
-                <a href="../applications/kmp.html">Kotlin Multiplatform</a>
-                <a href="../applications/android.html">Android Applications</a>
-            </div>
-        </div>
-    </nav>
-</header>
+<div data-include="../components/header.html"></div>
 <main>
-    <p>Basics variables</p>
+    <h2>Kotlin Multiplatform (KMP)</h2>
+    <div id="info">
+        <h3>What is Kotlin Multiplatform?</h3>
+        <p>Kotlin Multiplatform (KMP) is a feature of Kotlin that allows developers to write code once and run it on
+            multiple platforms, including Android, iOS, web, desktop, and backend systems. By sharing common code across
+            platforms, KMP reduces duplication and simplifies maintenance while still providing the flexibility to write
+            platform-specific implementations when needed.</p>
+        <ul>
+            <li>
+                <strong>Code Sharing:</strong>
+                Write your business logic, algorithms, and data models in a shared module, then use them across
+                different platforms.
+            </li>
+            <li>
+                <strong>Platform-Specific Implementations:</strong>
+                Use <strong>expect</strong> and <strong>actual</strong> declarations to implement platform-specific
+                functionality while keeping most of your code common.
+            </li>
+            <li>
+                <strong>Interoperability:</strong>
+                Easily integrate with existing platform code. For instance, on Android, you can interoperate with Java,
+                and on iOS, with Swift or Objective-C.
+            </li>
+            <li>
+                <strong>Reduced Duplication:</strong>
+                By centralizing the core logic, you minimize duplicate code, making your projects easier to maintain and
+                less prone to bugs.
+            </li>
+            <li>
+                <strong>Flexible Architecture:</strong>
+                KMP supports modular development, allowing teams to work simultaneously on shared code and
+                platform-specific modules.
+            </li>
+        </ul>
+        <p>Kotlin Multiplatform empowers you to build robust, cross-platform applications that leverage the strengths of
+            each target platform while keeping your core logic consistent.</p>
+    </div>
+
+    <div data-include="../components/footer.html"></div>
 </main>
 <script src="../script.js"></script>
+<script src="../../scripts/HTMLInclude.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.7.0/styles/atom-one-dark.min.css">
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
 </body>
 </html>
