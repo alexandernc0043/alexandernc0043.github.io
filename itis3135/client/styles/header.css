@@ -1,0 +1,39 @@
+@import 'colors.css';
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--blue);
+    height: 75px;
+    padding: 0 50px;
+}
+
+nav div p {
+    background-color: #526D82;
+    padding: 12px;
+    border-radius: 15px;
+    font-size: 25px;
+}
+
+nav div p, nav div a {
+    color: var(--biege);
+}
+
+#basics, #applications {
+    cursor: pointer;
+}
+
+nav {
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+nav div {
+    display: flex;
+    flex-direction: column;
+    width: calc(100% / 3);
+    align-items: center;
+}

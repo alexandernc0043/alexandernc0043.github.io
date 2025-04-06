@@ -1,0 +1,22 @@
+@import 'dropdown.css';
+@import "header.css";
+@import 'colors.css';
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-color: var(--biege);
+}
+a {
+    text-decoration: none;
+}
+a,p {
+    color: var(--black);
+}
+h1 a {
+    color: var(--biege);
+}
+.link {
+    font-weight: bold;
+}

@@ -4,38 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Client Project</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="styles/style.css">
     <script src="https://lint.page/kit/4d0fe3.js" crossorigin="anonymous"></script>
 </head>
 <body>
-<header>
-    <h1>Learn Kotlin!</h1>
-    <nav>
-        <div id="basics" class="drop-down">
-            <p>Basics</p>
-            <div id="basics-dropdown" class="drop-down-links">
-                <a href="">Variables</a>
-                <a href="">Types</a>
-                <a href="">...</a>
-            </div>
-        </div>
-        <div>
-            <p><a href="">Resources</a></p>
-        </div>
-        <div id="applications" class="drop-down">
-            <p>Applications</p>
-            <div id="applications-dropdown" class="drop-down-links">
-
-                <a href="">Introduction</a>
-                <a href="">Kotlin Multiplatform</a>
-                <a href="">Android Applications</a>
-            </div>
-        </div>
-    </nav>
-</header>
+<div data-include="components/header.html"></div>
 <main>
     <p>hello world</p>
 </main>
 <script src="script.js"></script>
+<script src="../scripts/HTMLInclude.js"></script>
 </body>
 </html>
