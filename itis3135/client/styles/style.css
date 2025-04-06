@@ -43,7 +43,19 @@ a {
     color: var(--blue);
     font-weight: bold;
 }
-
+button {
+    background: none;
+    border: none;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: inherit;
+    cursor: pointer;
+    padding: 0;
+}
+h1 button {
+    font-size: 32px;
+    color: var(--biege);
+}
 a:hover {
     text-decoration: underline;
 }
@@ -65,6 +77,6 @@ footer {
     left: 0;
     bottom: 0;
 }
-footer p, footer a{
+footer p, footer a {
     color: var(--biege);
 }

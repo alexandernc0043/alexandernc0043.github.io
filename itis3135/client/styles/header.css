@@ -20,7 +20,7 @@ nav div p {
     text-align: center;
 }
 
-nav div p, nav div a {
+nav div p, nav div button {
     color: var(--biege);
 }
 
@@ -41,7 +41,6 @@ nav div {
     flex-direction: column;
     align-items: center;
 }
-@import 'colors.css';
 
 .drop-down {
     position: relative;
@@ -67,20 +66,21 @@ nav div {
     display: flex;
 }
 
-.drop-down-links a {
+.drop-down-links button {
     padding: 20px 0 20px 20px;
-    width: calc(100% - 20px);
+    width: 100%;
+    font-size: 20px;
     text-align: left;
     text-decoration: none;
     color: black;
 }
 
-.drop-down-links a:last-child:hover {
+.drop-down-links button:last-child:hover {
     border-bottom-right-radius: 15px;
     border-bottom-left-radius: 15px;
 }
 
-.drop-down-links a:hover {
+.drop-down-links button:hover {
     background-color: white;
 }
 
