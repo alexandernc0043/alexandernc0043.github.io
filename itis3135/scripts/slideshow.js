@@ -9,6 +9,14 @@ const images = [
         image: 'images/gallery/Loki.jpg',
         text: 'Loki (One of my cats)'
     },
+    {
+        image: 'images/gallery/Erika',
+        text: 'Erika my mom'
+    },
+    {
+        image: 'images/gallery/Xray.png',
+        text: 'Post xray from when I dislocated my shoulder'
+    }
 ];
 
 const incrementSlideShow = (increment) => {
