@@ -127,3 +127,20 @@ $('#first').on('click', () => {
 $(document).ready(() => {
     update();
 });
+
+let slideshow;
+$('#play').on('click', () => {
+    if (slideshow) return;
+    slideshow = setInterval(() => {
+        incrementSlideShow(true);
+        update();
+        if (currentImage === images.length - 1) {
+            clearInterval(slideshow);
+            slideshow = null;
+        }
+    }, 750);
+});
+$('#stop').on('click', () => {
+    clearInterval(slideshow);
+    slideshow = null;
+});
