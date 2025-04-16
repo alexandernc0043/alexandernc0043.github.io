@@ -6,7 +6,7 @@ const images = [
         text: 'Alexander (me)'
     },
     { // l
-        image: 'images/gallery/Loki.jpg',
+        image: 'images/gallery/loki.jpg',
         text: 'Loki, one of my cats.'
     },
     {// e
@@ -104,31 +104,13 @@ const update = () => {
     position.html(positionText);
 };
 
-
-$('#previous').on('click', () => {
-    incrementSlideShow(false);
-    update();
-});
-
-$('#next').on('click', () => {
-    incrementSlideShow(true);
-    update();
-});
-
-$('#end').on('click', () => {
-    currentImage = images.length - 1;
-    update();
-});
-$('#first').on('click', () => {
-    currentImage = 0;
-    update();
-});
-
-$(document).ready(() => {
-    update();
-});
-
 let slideshow;
+
+const stopSlideshow = () => {
+    clearInterval(slideshow);
+    slideshow = null;
+};
+
 $('#play').on('click', () => {
     if (slideshow) return;
     slideshow = setInterval(() => {
@@ -141,6 +123,33 @@ $('#play').on('click', () => {
     }, 750);
 });
 $('#stop').on('click', () => {
-    clearInterval(slideshow);
-    slideshow = null;
+    stopSlideshow();
 });
+
+$('#previous').on('click', () => {
+    stopSlideshow();
+    incrementSlideShow(false);
+    update();
+});
+
+$('#next').on('click', () => {
+    stopSlideshow();
+    incrementSlideShow(true);
+    update();
+});
+
+$('#end').on('click', () => {
+    stopSlideshow();
+    currentImage = images.length - 1;
+    update();
+});
+$('#first').on('click', () => {
+    stopSlideshow();
+    currentImage = 0;
+    update();
+});
+
+$(document).ready(() => {
+    update();
+});
+
