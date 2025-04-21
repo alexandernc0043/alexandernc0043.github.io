@@ -1,4 +1,4 @@
-const regex = /((?:basics|applications)\/)[^/]+\.html$/;
+const regex = /((?:basics|applications|reviews)\/)[^/]+\.html$/;
 const load = (location) => {
     if (regex.test(window.location.toString())) {
         return window.location = window.location.toString().replace(regex, '') + location;
@@ -13,6 +13,8 @@ const functions = document.getElementById('functions');
 const classes = document.getElementById('classes');
 const kmp = document.getElementById('kmp');
 const android = document.getElementById('android');
+const ecarterb = document.getElementById('ecarterb');
+const cbego1 = document.getElementById('cbego1');
 
 [
     {element: learn, link: 'index.html'},
@@ -22,7 +24,9 @@ const android = document.getElementById('android');
     {element: functions, link: 'basics/functions.html'},
     {element: classes, link: 'basics/classes.html'},
     {element: kmp, link: 'applications/kmp.html'},
-    {element: android, link: 'applications/android.html'}
+    {element: android, link: 'applications/android.html'},
+    {element: ecarterb, link:'reviews/ecarterb.html'},
+    {element: cbego1, link:'reviews/cbego1.html'}
 ].forEach((item) => {
     item.element.addEventListener('click', () => {
         load(item.link);

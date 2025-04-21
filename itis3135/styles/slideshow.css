@@ -1,0 +1,32 @@
+#slideshow img {
+    width: 625px;
+    height: 500px;
+}
+#position {
+    text-align: center;
+    font-size: 25px;
+    margin: 0;
+}
+#slideshow {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+strong {
+    color: red;
+    font-size: 1.5em;
+    padding: 0 5px;
+}
+button {
+    border: none;
+    background-color: var(--blue);
+    color: white;
+    font-size: 30px;
+    padding: 12px;
+    border-radius: 12px;
+    cursor: pointer;
+}
+figcaption {
+    font-size: 1.15em;
+    text-align: center;
+}

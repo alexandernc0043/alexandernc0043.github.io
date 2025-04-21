@@ -1,16 +1,13 @@
-main p {
-    background-color: var(--lightgrey);
-    margin: 5vh auto;
-    padding: 20px;
-    border-radius: 20px;
-    max-width: 800px;
-    font-size: 30px;
-    opacity: 80%;
+p {
+    font-size: 20px;
     color: var(--darkgrey);
 }
-main a {
-    color: var(--blue)
+
+h2 {
+    font-size: 40px;
+    margin-bottom: 0;
 }
+
 footer {
     position: relative;
 }

@@ -23,14 +23,21 @@ nav div p {
 nav div p, nav div a {
     color: var(--biege);
 }
+nav div strong {
+    position: absolute;
+    right: 10px;
+    font-weight: bold;
+    font-size: 32px;
+    top: 30%;
+}
 
-#basics, #applications, #resources {
+#basics, #applications, #resources, #reviews {
     width: 212px;
     cursor: pointer;
 }
 
 nav {
-    width: 50%;
+    width: 60%;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -38,6 +45,7 @@ nav {
 
 nav div {
     display: flex;
+
     flex-direction: column;
     align-items: center;
 }

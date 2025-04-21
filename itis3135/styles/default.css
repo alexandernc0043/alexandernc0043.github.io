@@ -64,6 +64,8 @@ h2 {
 }
 
 a {
+    color: deepskyblue;
+    font-weight: bold;
     transition: 0.5s;
 }
 
@@ -73,12 +75,6 @@ p {
 main {
     padding-bottom: 5vh;
 }
-
-a:hover {
-    color: var(--blue);
-    font-weight: bolder;
-}
-
 span {
     color: #2276a0;
     font-weight: bold;
@@ -88,15 +84,17 @@ span {
 NAVBAR SECTION
  */
 h1 {
-    color: #fff;
-    font-size: 25px;
-    border-color: #fff;
+    margin: 0;
+}
+h1 a {
+    font-size: 40px;
     text-decoration: none;
-    font-weight: normal;
+    color: var(--lightgrey);
 }
 nav {
     background: var(--darkgrey);
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
     padding: 10px 0;
@@ -116,7 +114,6 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
     text-decoration: none;
     font-size: 18px;
     position: relative;
@@ -127,7 +124,7 @@ footer nav {
 }
 #divider {
     border-bottom: 1px solid var(--lightgrey);
-    width: 80%;
+    width: 90%;
     align-self: center;
 }
 
@@ -151,7 +148,6 @@ footer p {
 }
 
 footer a {
-    color: white;
     text-decoration: none;
 }
 #mobile {
@@ -161,86 +157,17 @@ footer a {
 /*
 DEVICE SETTINGS
  */
-
 main {
+    background-color: var(--lightgrey);
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    box-sizing: border-box;
+    margin: auto;
+    border-radius: 25px;
     max-width: 1200px; /* Adjust as needed */
     width: 90%; /* Adjust percentage based on design requirements */
-    margin: 0 auto; /* Centers the content horizontally */
 }
-
 /* Rule Overrides For Laptops / Small Screens */
-@media screen and ( min-width: 981px ) and ( max-width: 1400px ) {
-    h1 {
-        font-size: 20px;
-    }
-    nav div ul li a {
-        font-size: 15px;
-    }
-    nav {
-        flex-direction: column;
-    }
-    nav div {
-        flex-direction: column-reverse;
-        max-width: 50%;
-    }
-    main {
-        max-width: 981px;
-    }
-}
-/* Rule Overrides For Tablet Devices */
-@media screen and ( min-width: 601px ) and ( max-width: 980px )  {
-    main {
-        max-width: 80%;
-    }
-    h1 {
-        font-size: 20px;
-    }
-    nav div ul li a {
-        font-size: 14px;
-    }
-    nav {
-        flex-direction: column;
-    }
-
-    nav div {
-        flex-direction: column-reverse;
-
-    }
-    footer {
-        font-size: 14px;
-    }
-    #main nav {
-        padding: 0 10px;
-    }
-}
-/* Rule Overrides For Mobile Devices */
-@media screen and (min-width: 370px) and (max-width: 600px) {
-    nav {
-        flex-direction: column;
-    }
-    h1 {
-        font-size: 12px;
-    }
-    nav div ul li a {
-        font-size: 14px;
-    }
-    nav div {
-        max-width: 75%;
-        flex-direction: column-reverse;
-    }
-    main {
-        max-width: 80%;
-    }
-    #main {
-        display: none;
-    }
-    #mobile {
-        display: flex;
-    }
-    #mobile p:not(:last-child) {
-        font-size: 20px;
-        margin: 5px;
-        padding: 5px;
-        border-bottom: var(--lightgrey) 1px solid;
-    }
-}
