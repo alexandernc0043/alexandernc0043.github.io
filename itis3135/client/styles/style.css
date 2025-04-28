@@ -83,3 +83,11 @@ footer {
 footer p, footer a {
     color: var(--biege);
 }
+
+iframe {
+    width: 750px;
+    height: 650px;
+    background-color: rgb(32,32,32);
+    border-radius: 15px;
+    border: 5px solid grey;
+}
