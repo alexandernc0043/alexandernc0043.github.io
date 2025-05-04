@@ -34,7 +34,7 @@ main {
     max-width: 1500px;
     min-height: 100vh;
     align-self: center;
-    padding: 0 100px;
+    padding: 0 100px 100px 100px;
 }
 
 h2 {
@@ -64,10 +64,12 @@ a:hover {
 }
 code {
     border-radius: 15px;
+    font-size: 18px;
 }
 
 pre {
     margin: 0;
+
 }
 footer {
     background-color: var(--blue);
@@ -88,7 +90,7 @@ iframe {
     box-sizing: border-box;
     width: 750px;
     height: 650px;
-    background-color: rgb(32,32,32);
+    background-color: white;
     border-radius: 15px;
     border: 5px solid grey;
 }
