@@ -85,6 +85,7 @@ footer p, footer a {
 }
 
 iframe {
+    box-sizing: border-box;
     width: 750px;
     height: 650px;
     background-color: rgb(32,32,32);
