@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Assignment M0d | Setup University Webspace</title>
+    <link rel="stylesheet" href="../default.css">
+    <link rel="stylesheet" href="../atomOneDark.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+
+</head>
+<body>
+<header>
+    <h1>Assignment M0d | Setup University Webspace</h1>
+    <blockquote>
+        <p>Please follow all instructions before continuing to the next step.</p>
+    </blockquote>
+    <div class="toc">
+        <div class="toc-title">Table of Contents</div>
+        <ul>
+            <li><a href="#one">Step 1: Set up your computer</a></li>
+            <li><a href="#two">Step 2: Set up GitHub</a></li>
+            <li><a href="#three">Step 3: Creating your first webpage</a></li>
+            <li><a href="#three">Step 4: Creating your course page</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#submission">Submission Requirements</a></li>
+        </ul>
+    </div>
+</header>
+<main>
+    <section id="one">
+        <h2 id="step-1-set-up-your-computer">Step 1 - Set up your computer</h2>
+        <ol>
+            <li>Enable showing file extensions on your system.
+                <ul>
+                    <li>Windows Instructions:
+                        <ol>
+                            <li>Open File Explorer (Shortcut: <code>WIN + E</code>)</li>
+                            <li>Click <code>View</code></li>
+                            <li>Hover over <code>Show</code></li>
+                            <li>Click <code>File name Extensions</code></li>
+                        </ol>
+                    </li>
+                    <li>MacOS Instructions:
+                        <ol>
+                            <li>Open Finder</li>
+                            <li>Click Finder on the Menu Bar (Top Left)</li>
+                            <li>Click Settings (Shortcut: <code>CMD + ,</code>)</li>
+                            <li>Navigate to <code>Advanced</code></li>
+                            <li>Enable <code>Show all filename extensions</code></li>
+                        </ol>
+                    </li>
+                </ul>
+            <li>Install a Code Editor of your choosing.
+                <em>We recommend using Visual Studio Code (VS Code) which can be downloaded <a
+                        href="https://code.visualstudio.com/" target="_blank">here</a>.</em>
+                <br>
+                <em>If you install Visual Studio Code please download the <a
+                        target="_blank"
+                        href="https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer">Live Server
+                    Extension</a> from the Extensions
+                    Marketplace</em>
+            </li>
+            <li>Install an FTP <strong>Client</strong>
+                <em>We recommend using FileZilla, which can be downloaded <a
+                        target="_blank"
+                        href="https://filezilla-project.org/">here</a>.</em></li>
+            <li>Install the University&#39;s VPN Client
+                <br>
+                <em>You can download from <a target="_blank" href="https://vpn.charlotte.edu">here</a></em>
+                <br>
+                <strong>Login:</strong>
+            </li>
+            <li style="list-style: none">
+                <ul>
+                    <li>Username: <strong>Niner_Net_username</strong>@charlotte.edu</li>
+                    <li>Password: <strong>Niner_Net_password</strong></li>
+                </ul>
+                <em>Replace the bolded parts with your university provided login</em>
+            </li>
+            <li>Install GitHub Desktop <br>
+                You can download from <a target="_blank" href="https://desktop.github.com/download/">here</a>.<br>
+                <blockquote>
+                    You do not need to use GitHub Desktop and may use another Git Client or use the Git CLI. We
+                    recommend it as not everyone is familiar with git and CLI tools. But Instructions will assume that
+                    you installed it.
+                </blockquote>
+            </li>
+        </ol>
+    </section>
+    <hr>
+    <section id="two">
+        <h2>Step 2 - Setup GitHub</h2>
+        <ol>
+            <li>Go to <a target="_blank" href="https://github.com/">GitHub.com</a> and sign in or sign up for an
+                account.
+            </li>
+            <li>Navigate to the create repository button and create a repository.</li>
+            <li>Name the repository as follows: <strong>YOUR_GITHUB_USERNAME</strong>.github.io
+                <em>If you do not name your repository exactly like that your webpage will not work.</em></li>
+            <li>Open GitHub Desktop and clone your repository.</li>
+            <li>Open your cloned repository in Visual Studio Code by clicking the button inside GitHub Desktop</li>
+        </ol>
+    </section>
+    <hr>
+    <section id="three">
+        <h2>Step 3 - Creating your first webpage.</h2>
+        <ol>
+            <li>Inside Visual Studio Code create a new file called <code>index.html</code>.</li>
+            <li>Using Visual Studio Code's Emmett tool type an <code>!</code> and hit Tab or Enter on your keyboard.
+            </li>
+            <li>Your file should look like this now:<br>
+                <pre>
+                    <code class="language-html">
+&lt;!DOCTYPE html&gt;<br>
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="UTF-8"&gt;
+  &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+  &lt;title>Document&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+
+&lt;/body&gt;
+&lt;/html&gt;
+                    </code>
+                </pre>
+            </li>
+            <li>
+                <p>Edit your title by editing the word <code>Document</code> inside this element <code>&lt;title&gt;Document&lt;/title&gt;</code> with {YOUR_NAME} {Divider} Homepage</p>
+                <strong>Example(s):</strong>
+                <pre>
+                    <code>
+&lt;title&gt;Alexander Prechtel | Homepage&lt;/title&gt;
+&lt;title&gt;Alexander Prechtel ~ Homepage&lt;/title&gt;
+&lt;title&gt;Alexander Prechtel - Homepage&lt;/title&gt;
+                    </code>
+                </pre>
+            </li>
+            <li>
+                <p>Inside your <code>body</code> element add a Heading 1 element (<code>h1</code>) and put the following:</p>
+                <pre>
+                    <code>
+&lt;body&gt;
+    &lt;h1&gt;Welcome to my homepage!&lt;/h1&gt;
+&lt;/body&gt;
+                    </code>
+                </pre>
+            </li>
+            <li>
+                Now add an anchor element (``a``) after your heading 1 element that will take you to your course page.
+                <pre><code>&lt;a href="itis3135"&gt;Click here to go to my ITIS-3135 course page!&lt;/a&gt;</code></pre>
+                <br>Your body should now look like this:
+                <pre><code>
+&lt;body&gt;
+    &lt;h1&gt;Welcome to my homepage!&lt;/h1&gt;
+    &lt;a href="itis3135"&gt;Click here to go to my ITIS-3135 coursepage!&lt;/a&gt;
+&lt;/body&gt;
+                </code></pre>
+            </li>
+        </ol>
+    </section>
+    <hr>
+    <section id="four">
+
+    </section>
+</main>
+<footer>
+    <p>Created by Alexander Prechtel &copy; 2025 </p>
+</footer>
+<script>hljs.highlightAll();</script>
+</body>
+</html>
