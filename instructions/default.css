@@ -73,6 +73,7 @@ pre code {
     padding: 0.2em 0.4em;
     border-radius: 4px;
 }
+
 footer {
     text-align: center;
 }
@@ -83,8 +84,9 @@ footer {
     border-radius: 6px;
     padding: 1em 1.5em;
     margin: 2em 0;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
     font-size: 1em;
+
 }
 
 .toc-title {
@@ -120,9 +122,11 @@ footer {
     body {
         padding: 1em;
     }
+
     blockquote {
         padding: 0.5em 1em;
     }
+
     pre {
         padding: 0.5em;
     }

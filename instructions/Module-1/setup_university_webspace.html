@@ -25,6 +25,7 @@
             <li><a href="#two">Step 2 - Set up GitHub</a></li>
             <li><a href="#three">Step 3 - Creating your first webpage</a></li>
             <li><a href="#four">Step 4 - Creating your course page</a></li>
+            <li><a href="#five">Step 5 - Creating your UNCC webspace</a></li>
             <li><a href="#faq">FAQ</a></li>
             <li><a href="#submission">Submission Requirements</a></li>
         </ul>
@@ -84,7 +85,8 @@
             <li>Install GitHub Desktop <br>
                 You can download from <a target="_blank" href="https://desktop.github.com/download/">here</a>.<br>
                 <blockquote>
-                    You do not need to use GitHub Desktop and may use another Git Client or use the Git CLI. We
+                    <strong>Note:</strong> You do not need to use GitHub Desktop and may use another Git Client or use
+                    the Git CLI. We
                     recommend it as not everyone is familiar with git and CLI tools. But Instructions will assume that
                     you installed it.
                 </blockquote>
@@ -115,7 +117,8 @@
             <li>Your file should look like this now:<br>
                 <pre>
                     <code class="language-html">
-&lt;!DOCTYPE html&gt;<br>
+&lt;&excl;&minus;&minus; root/index.html &minus;&minus;&gt;
+&lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
   &lt;meta charset="UTF-8"&gt;
@@ -157,6 +160,7 @@
                 <pre><code>&lt;a href="itis3135"&gt;Click here to go to my ITIS-3135 course page!&lt;/a&gt;</code></pre>
                 <br>Your body should now look like this:
                 <pre><code>
+&lt;&excl;&minus;&minus; root/index.html &minus;&minus;&gt;
 &lt;body&gt;
     &lt;h1&gt;Welcome to my homepage!&lt;/h1&gt;
     &lt;a href="itis3135"&gt;Click here to go to my ITIS-3135 coursepage!&lt;/a&gt;
@@ -173,7 +177,8 @@
                 Inside your GITHUB_USER_NAME.github.io folder create a folder named <code>itis3135</code>
                 <br>
                 <em>
-                    Note: in the future your GITHUB_USER_NAME.github.io folder will be referred to as the "root" of
+                    <strong>Note:</strong> in the future your GITHUB_USER_NAME.github.io folder will be referred to as
+                    the "root" of
                     your website
                 </em>
             </li>
@@ -195,6 +200,7 @@
                 Your new <code>index.html</code> file should look like this now:
                 <pre>
                     <code>
+&lt;&excl;&minus;&minus; itis3135/index.html &minus;&minus;&gt;
 &lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
@@ -209,7 +215,175 @@
                     </code>
                 </pre>
             </li>
+            <li>
+                Now inside the ITIS-3135 folder create 5 new folders with the names:
+                <ol>
+                    <li>
+                        images
+                    </li>
+                    <li>
+                        components
+                    </li>
+                    <li>
+                        scripts
+                    </li>
+                    <li>
+                        styles
+                    </li>
+                    <li>
+                        project
+                    </li>
+                    <li>
+                        archives
+                    </li>
+                </ol>
+                <blockquote><strong>Note:</strong> GitHub won&apos;t track folders with no files inside. You can add a
+                    README.md file if you want
+                    to have it be tracked but that's not required.
+                </blockquote>
+            </li>
+
         </ol>
+    </section>
+    <hr>
+    <section id="five">
+        <h2>Creating your UNCC webspace</h2>
+        <ol>
+            <li>
+                Request your UNCC Webspace by visiting <a
+                    target="_blank"
+                    href="https://webpages.charlotte.edu">webpages.charlotte.edu</a> and signing in with your NinerNet
+                account and clicking request account.
+                <blockquote><strong>Note:</strong> This can take up to 10 minutes to provision.</blockquote>
+            </li>
+            <li>
+                After waiting some time visit webpages.charlotte.edu/<strong>YOUR_NINER_NET_USERNAME</strong>/, and you
+                should see a template website saying it&apos;s created.
+                <br>
+                <em>Example: <a target="_blank" href="https://webpages.charlotte.edu/aprechte">https://webpages.charlotte.edu/aprechte</a></em>
+            </li>
+            <li>
+                Use FileZilla to transfer your files to your university webspace.
+                <blockquote>
+                    <strong>Note:</strong> If you are off campus you will need to use the Cisco Secure VPN you installed
+                    in previous steps. Inside the box when opening Cisco Secure Client you will type <strong>vpn.charlotte.edu</strong>
+                    then Login with your NinerNet account details.
+                </blockquote>
+                <ol>
+                    <li>
+                        Connecting to the university webpage SFTP server.
+                        <blockquote>
+                            <strong>Host:</strong> webpages.charlotte.edu<br>
+                            <strong>Username:</strong> YOUR_NINER_NET_USERNAME <strong>DO NOT INCLUDE
+                            @charlotte.edu</strong><br>
+                            <strong>Password:</strong> YOUR_NINER_NET_PASSWORD<br>
+                            <strong>Port:</strong> 22 <br><br>
+                            Once you are connected you should see your computer&apos;s files on the left and the server&apos;s
+                            on the right
+                        </blockquote>
+                    </li>
+                    <li>
+                        On the server side open the <code>public_html</code> folder.
+                    </li>
+                    <li>
+                        Now navigate to your GITHUB_USER_NAME.github.io folder on your computer.
+                    </li>
+                    <li>
+                        Once you have located your folder drag the <code>index.html</code> folder on the server side
+                        inside your <code>itis3135/archive</code> folder
+                    </li>
+                    <li>
+                        After you have done that move your <code>index.html</code> in the root of your website and
+                        <code>itis3135</code> folder into the <code>public_html</code> folder on the server side.
+                    </li>
+                </ol>
+            </li>
+            <li>
+                After you have successfully set up your university webspace go to GitHub Desktop and commit your changes
+                <ol>
+                    <li>
+                        First type in a summary message of what you changed/add/updated
+                    </li>
+                    <li>
+                        Click commit X files
+                    </li>
+                    <li>
+                        Click push origin
+                    </li>
+                </ol>
+            </li>
+        </ol>
+    </section>
+    <hr>
+    <section id="faq">
+        <h2>Frequently Asked Questions</h2>
+        <ul>
+            <li>Office of OneIT Resources
+                <ul>
+                    <li>
+                        <a target="_blank"
+                           href="https://services.help.charlotte.edu/TDClient/33/Portal/KB/?CategoryID=26">Personal
+                            Webpages Guide</a>
+                    </li>
+                    <li><a target="_blank"
+                           href="https://services.help.charlotte.edu/TDClient/33/Portal/KB/ArticleDet?ID=677">How do I
+                        login to VPN?</a>
+                    </li>
+                </ul>
+            </li>
+            <li>GitHub Resources
+                <ul>
+                    <li>
+                        <a target="_blank"
+                           href="https://docs.github.com/en/repositories/creating-and-managing-repositories/quickstart-for-repositories">How
+                            do I create a repository</a>
+                    </li>
+                    <li>
+                        <a href="https://docs.github.com/en/desktop/adding-and-cloning-repositories/cloning-and-forking-repositories-from-github-desktop"
+                           target="_blank">How
+                            do I clone a repository on GitHub Desktop</a>
+                    </li>
+                    <li>
+                        <a href="https://docs.github.com/en/desktop/making-changes-in-a-branch/committing-and-reviewing-changes-to-your-project-in-github-desktop"
+                           target="_blank">
+                            How do I review and commit my changes
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://docs.github.com/en/desktop/making-changes-in-a-branch/pushing-changes-to-github-from-github-desktop"
+                           target="_blank">How do I push my changes</a>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+    <hr>
+    <section id="submission">
+        <h2>Submission</h2>
+        <blockquote>
+            Please submit the following<br>
+            <strong>Note:</strong> your university webpage and GitHub webpage should/need to be identical.
+        </blockquote>
+        <ul>
+            <li>
+                A screenshot of the entire FileZilla application showing your computer&apos;s files and server&apos;s
+                files.
+            </li>
+            <li>
+                The URL for your UNCC webpage&apos;s itis3135 page.
+                <blockquote>
+                    <strong>Example:</strong> <a target="_blank"
+                                                 href="https://webpages.charlotte.edu/aprechte/itis3135/">https://webpages.charlotte.edu/aprechte/itis3135/</a>
+                </blockquote>
+            </li>
+            <li>
+                The URL for your GitHub <strong>repository</strong>.
+                <blockquote>
+                    <strong>Example:</strong> <a target="_blank"
+                                                 href="https://github.com/alexandernc0043/alexandernc0043.github.io">https://github.com/alexandernc0043/alexandernc0043.github.io</a>
+                </blockquote>
+            </li>
+        </ul>
     </section>
 </main>
 <footer>
