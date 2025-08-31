@@ -73,6 +73,9 @@ pre code {
     padding: 0.2em 0.4em;
     border-radius: 4px;
 }
+footer {
+    text-align: center;
+}
 
 @media (max-width: 600px) {
     body {
