@@ -44,7 +44,10 @@ li {
 ol {
     counter-reset: item;
 }
-section ol li:before {
+ul > li {
+    list-style: disc inside;
+}
+section ol > li:before {
     content: counter(item) ") ";
     counter-increment: item;
 }
