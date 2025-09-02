@@ -18,6 +18,7 @@ html {
 body {
     margin: 0;
     padding: 2em;
+    counter-reset: header;
 }
 
 blockquote {
@@ -38,6 +39,18 @@ ul, ol {
 li {
     margin-bottom: 0.5em;
     line-height: 1.6;
+    list-style: none;
+}
+ol {
+    counter-reset: item;
+}
+section ol li:before {
+    content: counter(item) ") ";
+    counter-increment: item;
+}
+h2:before {
+    content: "Step " counter(header) " - ";
+    counter-increment: header;
 }
 
 code, pre code, .hljs {
@@ -78,7 +91,7 @@ footer {
     text-align: center;
 }
 
-.toc {
+#toc {
     background: #fff;
     border: 1px solid #e0e0e0;
     border-radius: 6px;
@@ -89,31 +102,31 @@ footer {
 
 }
 
-.toc-title {
+#toc-title {
     font-weight: bold;
     margin-bottom: 0.5em;
     color: #333;
     letter-spacing: 0.02em;
 }
 
-.toc ul {
+#toc ul {
     list-style: none;
     padding-left: 0;
     margin: 0;
 }
 
-.toc li {
+#toc li {
     margin-bottom: 0.4em;
     line-height: 1.5;
 }
 
-.toc a {
+#toc a {
     color: #1976d2;
     text-decoration: none;
     transition: color 0.2s;
 }
 
-.toc a:hover {
+#toc a:hover {
     color: #0d47a1;
     text-decoration: underline;
 }

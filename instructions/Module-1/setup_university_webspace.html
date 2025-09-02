@@ -5,7 +5,7 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Assignment M0d | Setup University Webspace</title>
+    <title></title>
     <link rel="stylesheet" href="../default.css">
     <link rel="stylesheet" href="../atomOneDark.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
@@ -18,22 +18,14 @@
     <blockquote>
         <p>Please follow all instructions before continuing to the next step.</p>
     </blockquote>
-    <div class="toc">
-        <div class="toc-title">Table of Contents</div>
-        <ul>
-            <li><a href="#one">Step 1 - Set up your computer</a></li>
-            <li><a href="#two">Step 2 - Set up GitHub</a></li>
-            <li><a href="#three">Step 3 - Creating your first webpage</a></li>
-            <li><a href="#four">Step 4 - Creating your course page</a></li>
-            <li><a href="#five">Step 5 - Creating your UNCC webspace</a></li>
-            <li><a href="#faq">FAQ</a></li>
-            <li><a href="#submission">Submission Requirements</a></li>
-        </ul>
+    <div id="toc">
+        <div id="toc-title">Table of Contents</div>
+        <ul></ul>
     </div>
 </header>
 <main>
-    <section id="one">
-        <h2 id="step-1-set-up-your-computer">Step 1 - Set up your computer</h2>
+    <section>
+        <h2>Set up your computer</h2>
         <ol>
             <li>Enable showing file extensions on your system.
                 <ul>
@@ -94,8 +86,8 @@
         </ol>
     </section>
     <hr>
-    <section id="two">
-        <h2>Step 2 - Setup GitHub</h2>
+    <section>
+        <h2>Setup GitHub</h2>
         <ol>
             <li>Go to <a target="_blank" href="https://github.com/">GitHub.com</a> and sign in or sign up for an
                 account.
@@ -108,8 +100,8 @@
         </ol>
     </section>
     <hr>
-    <section id="three">
-        <h2>Step 3 - Creating your first webpage.</h2>
+    <section>
+        <h2>Creating your first webpage.</h2>
         <ol>
             <li>Inside Visual Studio Code create a new file called <code>index.html</code>.</li>
             <li>Using Visual Studio Code's Emmett tool type an <code>!</code> and hit Tab or Enter on your keyboard.
@@ -126,15 +118,13 @@
   &lt;title>Document&lt;/title&gt;
 &lt;/head&gt;
 &lt;body&gt;
-
 &lt;/body&gt;
 &lt;/html&gt;
                     </code>
                 </pre>
             </li>
-            <li>
-                <p>Edit your title by editing the word <code>Document</code> inside this element <code class="language-html">&lt;title&gt;Document&lt;/title&gt;</code>
-                    with {YOUR_NAME} {Divider} Homepage</p>
+            <li>Edit your title by editing the word <code>Document</code> inside this element <code class="language-html">&lt;title&gt;Document&lt;/title&gt;</code> with {YOUR_NAME} {Divider} Homepage
+               <br><br>
                 <strong>Example(s):</strong>
                 <pre>
                     <code>
@@ -145,8 +135,8 @@
                 </pre>
             </li>
             <li>
-                <p>Inside your <code>body</code> element add a Heading 1 element (<code>h1</code>) and put the
-                    following:</p>
+                Inside your <code>body</code> element add a Heading 1 element (<code>h1</code>) and put the
+                    following:
                 <pre>
                     <code>
 &lt;body&gt;
@@ -156,7 +146,7 @@
                 </pre>
             </li>
             <li>
-                Now add an anchor element (``a``) after your heading 1 element that will take you to your course page.
+                Now add an anchor element ( <code>a</code> ) after your heading 1 element that will take you to your course page.
                 <pre><code>&lt;a href="itis3135"&gt;Click here to go to my ITIS-3135 course page!&lt;/a&gt;</code></pre>
                 <br>Your body should now look like this:
                 <pre><code>
@@ -170,20 +160,19 @@
         </ol>
     </section>
     <hr>
-    <section id="four">
-        <h2>Step 4 - Creating your course page</h2>
+    <section>
+        <h2>Creating your course page</h2>
         <ol>
             <li>
                 Inside your GITHUB_USER_NAME.github.io folder create a folder named <code>itis3135</code>
                 <br>
-                <em>
+                <blockquote>
                     <strong>Note:</strong> in the future your GITHUB_USER_NAME.github.io folder will be referred to as
                     the "root" of
                     your website
-                </em>
+                </blockquote>
             </li>
-            <li>
-                inside your <code>itis3135</code> folder create a new file called <code>index.html</code>
+            <li>Inside your <code>itis3135</code> folder create a new file called <code>index.html</code>
             </li>
             <li>
                 Open your newly created <code>index.html</code> file inside your <code>itis3135</code> folder.
@@ -196,11 +185,11 @@
                 Remove the anchor element (<code>a</code>)
             </li>
             <li>
-                <p>Replace everywhere you have <code>homepage</code> with <code>ITIS-3135 course page</code></p>
-                Your new <code>index.html</code> file should look like this now:
+                Replace everywhere you have <code>homepage</code> with <code>ITIS-3135 course page</code>
+               <br><br><br> Your new <code>index.html</code> file should look like this now:
                 <pre>
                     <code>
-&lt;&excl;&minus;&minus; itis3135/index.html &minus;&minus;&gt;
+&lt;&excl;&minus;&minus; root/itis3135/index.html &minus;&minus;&gt;
 &lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
 &lt;head&gt;
@@ -216,7 +205,7 @@
                 </pre>
             </li>
             <li>
-                Now inside the ITIS-3135 folder create 5 new folders with the names:
+                Now inside the ITIS-3135 folder create 6 new folders with the names:
                 <ol>
                     <li>
                         images
@@ -246,7 +235,7 @@
         </ol>
     </section>
     <hr>
-    <section id="five">
+    <section>
         <h2>Creating your UNCC webspace</h2>
         <ol>
             <li>
@@ -260,7 +249,7 @@
                 After waiting some time visit webpages.charlotte.edu/<strong>YOUR_NINER_NET_USERNAME</strong>/, and you
                 should see a template website saying it&apos;s created.
                 <br>
-                <em>Example: <a target="_blank" href="https://webpages.charlotte.edu/aprechte">https://webpages.charlotte.edu/aprechte</a></em>
+                <blockquote><strong>Example:</strong> <a target="_blank" href="https://webpages.charlotte.edu/aprechte">https://webpages.charlotte.edu/aprechte</a></blockquote>
             </li>
             <li>
                 Use FileZilla to transfer your files to your university webspace.
@@ -289,8 +278,8 @@
                         Now navigate to your GITHUB_USER_NAME.github.io folder on your computer.
                     </li>
                     <li>
-                        Once you have located your folder drag the <code>index.html</code> folder on the server side
-                        inside your <code>itis3135/archive</code> folder
+                        Once you have located your folder drag the <code>publc_html/index.html</code> folder on the server side
+                        inside your <code>root/itis3135/archive</code> folder
                     </li>
                     <li>
                         After you have done that move your <code>index.html</code> in the root of your website and
@@ -305,7 +294,7 @@
                         First type in a summary message of what you changed/add/updated
                     </li>
                     <li>
-                        Click commit X files
+                        Click commit # files
                     </li>
                     <li>
                         Click push origin
@@ -315,7 +304,7 @@
         </ol>
     </section>
     <hr>
-    <section id="faq">
+    <section>
         <h2>Frequently Asked Questions</h2>
         <ul>
             <li>Office of OneIT Resources
@@ -358,7 +347,7 @@
         </ul>
     </section>
     <hr>
-    <section id="submission">
+    <section>
         <h2>Submission</h2>
         <blockquote>
             Please submit the following<br>
@@ -389,6 +378,7 @@
 <footer>
     <p>Created by Alexander Prechtel &copy; 2025 </p>
 </footer>
+<script src="../main.js"></script>
 <script>hljs.highlightAll();</script>
 </body>
 </html>
