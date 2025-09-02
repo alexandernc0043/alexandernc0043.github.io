@@ -52,7 +52,7 @@ section ol > li:before {
     counter-increment: item;
 }
 h2:before {
-    content: "Step " counter(header) " - ";
+    content: "("counter(header) ") ";
     counter-increment: header;
 }
 
