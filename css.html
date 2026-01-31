@@ -8,6 +8,25 @@
       src="https://lint.page/kit/4d0fe3.js"
       crossorigin="anonymous"
     ></script>
+    <style>
+      .grdItem {
+        background-color: green;
+        border: 1px solid black;
+        border-radius: 5%;
+        display: flex;
+        height: 75px;
+        width: 75px;
+      }
+      #grd {
+        display: grid;
+        border: 1px solid black;
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+        align-items: center;
+        height: 300px;
+        width: 300px;
+      }
+    </style>
   </head>
   <body>
     <header>
@@ -19,17 +38,17 @@
       <!-- this is the closing tag -->
       <nav>
         <a href="index.html">Home</a>
+        <a href="css.html">CSS Examples</a>
         <a href="introduction.html">Introduction</a>
         <a href="itis3135/">ITIS 3135</a>
       </nav>
     </header>
     <main>
-      <h2>Welcome to my site!</h2>
-      <p>NO CSS!</p>
-      <p>
-        officia reprehenderit aliquip sit laboris veniam proident ut ea anim
-        esse amet consequat ex esse nostrud eu ea et ea
-      </p>
+      <h2>CSS Examples</h2>
+      <h3>Grid</h3>
+      <div id="grd"></div>
+      <button onclick="changeGrid(true)">add</button
+      ><button onclick="changeGrid(false)">remove</button>
     </main>
     <footer>
       <nav>
@@ -45,5 +64,23 @@
       <hr />
       Demo site created for class
     </footer>
+    <script>
+      const createItem = (className) => {
+        const item = document.createElement("div");
+        item.classList.add(className);
+        return item;
+      };
+
+      const changeGrid = (type) => {
+        const grid = document.querySelector("#grd");
+        if (type) {
+          grid.appendChild(createItem("grdItem"));
+          console.log("adding item");
+        } else {
+          grid.removeChild(grid.childNodes[grid.childNodes.length - 1]);
+          console.log("removing item");
+        }
+      };
+    </script>
   </body>
 </html>
