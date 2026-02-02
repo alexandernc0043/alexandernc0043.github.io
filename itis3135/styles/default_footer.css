@@ -1,0 +1,27 @@
+footer ul li a {
+  text-decoration: none;
+  font-size: 1.15em;
+}
+footer ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+footer p {
+  text-align: center;
+}
+
+/* spaces out list */
+footer ul li:not(:last-child) {
+  margin-right: 10px;
+}
+footer ul li:not(:last-child)::after {
+  content: " | ";
+}
+footer ul {
+  justify-content: center;
+}
+footer ul:last-child{
+  margin-top: 10px;
+}

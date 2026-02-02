@@ -1,25 +1,27 @@
-nav ul{
-    display: flex;
-    flex-direction: row;
-    width: 100vw;
-    justify-content: space-around;
-    list-style: none;
+@import "default_footer.css";
+@import "default_header.css";
+@import "navbar.css";
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
 }
-nav ul li a {
-    text-decoration: none;
+
+body {
+  width: 1500px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin: 20px auto 0 auto;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.1em;
 }
-a:visited{
-    color: blue;
+
+a:visited {
+  color: blue;
 }
 a {
-        color: blue;
-}
-/* Center body content horizontally and vertically */
-body {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh; /* Full viewport height */
-    margin: 0;
+  color: blue;
 }
