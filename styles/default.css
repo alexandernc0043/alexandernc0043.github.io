@@ -1,0 +1,63 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+:root {
+  --charlote-green: #005035;
+  --niner-gold: #a49665;
+}
+body {
+  background-color: white;
+  color: var(--charlote-green);
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.15em;
+}
+main,
+footer {
+  width: 800px;
+  margin: 0 auto;
+}
+footer {
+  margin-top: 50px;
+}
+footer nav ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  justify-content: center;
+}
+footer p {
+  text-align: center;
+}
+footer nav ul li:not(:last-child)::after {
+  margin-right: 10px;
+  content: " | ";
+}
+header {
+  background-color: lightgray;
+  padding: 20px 0;
+}
+h1 {
+  font-size: 2em;
+}
+h2 {
+  margin: 20px 0;
+  font-size: 1.75em;
+}
+header {
+  font-size: 1.5em;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+a,
+a:visited {
+  color: var(--niner-gold);
+  font-weight: bolder;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
