@@ -1,6 +1,5 @@
 @import "default_footer.css";
 @import "default_header.css";
-@import "navbar.css";
 *,
 *::before,
 *::after {
@@ -9,14 +8,21 @@
 }
 
 body {
-  width: 1500px;
+  width: 900px;
+  /* Used for debugging */
+  /* border: 1px solid black; */
+  align-items: center;
   height: 100vh;
   display: flex;
   flex-direction: column;
   gap: 50px;
-  margin: 20px auto 0 auto;
+  margin: 20px auto 0 auto; /* 20px top, auto l/r, 0 bottom*/
   font-family: "Courier New", Courier, monospace;
   font-size: 1.1em;
+}
+
+header, main {
+  width: 95%;
 }
 
 a:visited {
