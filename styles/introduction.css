@@ -7,7 +7,19 @@ figure {
     display: flex;
     flex-direction: column;
 }
+figcaption {
+    font-style: italic;
+    margin-top: 10px;
+}
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+blockquote {
+    text-align: center;
+}
 
 img {
-    width: 250px;
+    width: 450px;
 }
