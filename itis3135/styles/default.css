@@ -8,7 +8,7 @@
 }
 
 body {
-  width: 900px;
+  width: 1000px;
   /* Used for debugging */
   /* border: 1px solid black; */
   align-items: center;
@@ -20,9 +20,8 @@ body {
   font-family: "Courier New", Courier, monospace;
   font-size: 1.1em;
 }
-
-header, main {
-  width: 95%;
+main {
+  width: 900px;
 }
 
 a:visited {

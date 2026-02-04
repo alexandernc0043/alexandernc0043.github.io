@@ -8,19 +8,17 @@
       src="https://lint.page/kit/4d0fe3.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="stylesheet" href="styles/default.css">
-    <link rel="stylesheet" href="styles/introduction.css">
-    <link rel="shortcut icon" href="itis3135/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="styles/default.css" />
+    <link rel="stylesheet" href="styles/introduction.css" />
+
+    <link
+      rel="shortcut icon"
+      href="itis3135/images/favicon.ico"
+      type="image/x-icon"
+    />
   </head>
   <body>
-    <header>
-      <h1>Alexander's Charlotte Website</h1>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="introduction.html">Introduction</a>
-        <a href="itis3135/">ITIS 3135</a>
-      </nav>
-    </header>
+    <div data-include="components/header.html"></div>
     <main>
       <h2>Introduction</h2>
       <h3>Alexander Prechtel</h3>
@@ -28,7 +26,6 @@
         <img
           src="introductionPhoto.jpeg"
           alt="Petting one of my cats Loki outside."
-          
         />
         <figcaption>Petting one of my cats Loki outside.</figcaption>
       </figure>
@@ -98,23 +95,11 @@
       </ul>
       <blockquote>
         “Do what is right, not what is easy nor what is popular.”
-        <br>
+        <br />
         <em>- Roy T. Bennett</em>
       </blockquote>
     </main>
-    <footer>
-      <nav>
-        <ul>
-          <li><a href="itis3135/">ITIS3135</a></li>
-          <li>
-            <a href="https://webpages.charlotte.edu/aprechte">CLT Web</a>
-          </li>
-          <li><a href="https://www.github.com/alexandernc0043">GitHub</a></li>
-          <li><a href="https://alexandernc0043.github.io">GitHub Pages</a></li>
-          <li><a href="https://linkedin.com/in/alex-prechtel">LinkedIn</a></li>
-        </ul>
-      </nav>
-      <p>Demo site created for class</p>
-    </footer>
+    <div data-include="components/footer.html"></div>
+    <script src="itis3135/scripts/HTMLInclude.min.js"></script>
   </body>
 </html>

@@ -23,3 +23,11 @@ blockquote {
 img {
     width: 450px;
 }
+@media (min-width: 320px) {
+    figure img {
+        width: 350px;
+    }
+    figcaption {
+        font-size: 0.99em;
+    }
+}
