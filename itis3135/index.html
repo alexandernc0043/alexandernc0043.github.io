@@ -10,13 +10,27 @@
     ></script>
     <link rel="stylesheet" href="styles/default.css" />
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <!-- <style>
+      /* CSS Goes here */
+      p {
+        color: green;
+      }
+    </style> -->
+    <!-- HTML Goes Here, notice difference in comments -->
   </head>
   <body>
+    <script>
+      // JavaScript Goes Here
+      console.log("Welcome to my ITIS3135 course page");
+    </script>
     <div data-include="components/header.html"></div>
     <main>
       <h2>Home</h2>
-      <hr>
-      <p>Welcome to my ITIS3135 course page</p>
+      <hr />
+      <!-- These are inline styles -->
+      <p style="color: blue">Welcome to my ITIS3135 course page</p>
+      <p style="color: red">another paragraph</p>
+      <p>another another paragraph</p>
     </main>
     <div data-include="components/footer.html"></div>
     <script src="scripts/HTMLInclude.min.js"></script>
