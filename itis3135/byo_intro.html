@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Alexander Prechtel's Advanced Pegasus | ITIS3135 | Build Your Introduction</title>
+    <script
+      src="https://lint.page/kit/4d0fe3.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="styles/default.css" />
+    <link rel="stylesheet" href="styles/survey.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/styles/github.min.css" />
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon" />
+    <style>
+      main {
+        max-width: 920px;
+      }
+      .output-container {
+        display: none;
+        margin-top: 25px;
+        padding: 20px;
+        border: 1px solid #c4d0ca;
+        border-radius: 10px;
+        background: #f8fdfb;
+      }
+      #page-output-section {
+        margin-top: 10px;
+        padding: 0;
+        border: none;
+        border-radius: 0;
+        background: transparent;
+      }
+      .action-buttons {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin: 20px 0;
+        align-items: center;
+      }
+      .action-buttons button {
+        border: 0;
+        border-radius: 6px;
+        color: #fff;
+        background: #005035;
+        padding: 10px 14px;
+        font-size: 1rem;
+        cursor: pointer;
+        font-weight: 700;
+        transition: transform 0.15s ease, background 0.2s ease;
+      }
+      .action-buttons button:hover {
+        background: #036b49;
+      }
+      .action-buttons button:active {
+        transform: translateY(1px);
+      }
+      .photo-preview {
+        margin-top: 6px;
+        max-width: 250px;
+        height: auto;
+        border: 1px solid #ccc;
+        padding: 3px;
+        border-radius: 8px;
+        background: #fff;
+      }
+      .output-panel {
+        margin-bottom: 20px;
+      }
+      .output-panel pre {
+        max-height: 420px;
+        overflow: visible;
+      }
+      .output-panel h3,
+      #output-section h3 {
+        margin: 12px 0 8px;
+      }
+      .generated-intro-frame {
+        width: 100%;
+        min-height: 780px;
+        border: none;
+        overflow: hidden;
+        display: block;
+      }
+      .back-button {
+        margin-bottom: 12px;
+        border: 0;
+        border-radius: 6px;
+        color: #fff;
+        background: #2f6f58;
+        padding: 10px 14px;
+        font-size: 1rem;
+        cursor: pointer;
+        font-weight: 700;
+      }
+      @media (max-width: 680px) {
+        .action-buttons {
+          flex-direction: column;
+          align-items: stretch;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div data-include="components/header.html"></div>
+    <main>
+      <h2>Build Your Introduction</h2>
+      <form id="intro-builder-form" novalidate>
+        <label for="firstName">First Name
+          <input type="text" id="firstName" name="firstName" />
+        </label>
+        <label for="middleName">Middle Name (Optional)
+          <input type="text" id="middleName" name="middleName" />
+        </label>
+        <label for="lastName">Last Name
+          <input type="text" id="lastName" name="lastName" />
+        </label>
+        <label for="preferredName">Preferred Name
+          <input type="text" id="preferredName" name="preferredName" />
+        </label>
+        <label for="mascot-adjective">Mascot Adjective
+          <input type="text" id="mascot-adjective" name="mascotAdjective" />
+        </label>
+        <label for="mascot-animal">Mascot Animal
+          <input type="text" id="mascot-animal" name="mascotAnimal" />
+        </label>
+        <label for="photo">Upload Photo (stays in browser)
+          <input type="file" id="photo" name="photo" accept="image/*" />
+        </label>
+        <img id="photo-preview" class="photo-preview" src="../introductionPhoto.jpeg" alt="Selected introduction photo preview" />
+        <label for="photoCaption">Photo Caption
+          <input type="text" id="photoCaption" name="photoCaption" />
+        </label>
+        <label for="headline">Introductory Paragraph
+          <textarea id="headline" name="headline" rows="4"></textarea>
+        </label>
+        <label for="personalBackground">Personal Background
+          <textarea id="personalBackground" name="personalBackground" rows="3"></textarea>
+        </label>
+        <label for="academicBackground">Academic Background
+          <textarea id="academicBackground" name="academicBackground" rows="3"></textarea>
+        </label>
+        <label for="subjectBackground">Background in this Subject
+          <textarea id="subjectBackground" name="subjectBackground" rows="3"></textarea>
+        </label>
+        <label for="primaryWorkComputer">Primary Work Computer
+          <input type="text" id="primaryWorkComputer" name="primaryWorkComputer" />
+        </label>
+        <label for="backupPlan">Backup Work Computer &amp; Location Plan
+          <input type="text" id="backupPlan" name="backupPlan" />
+        </label>
+        <section id="courses-section" class="courses-section">
+          <h3>Courses I'm Taking, and Why</h3>
+          <div id="course-list" class="courses-list"></div>
+          <div class="course-actions">
+            <button type="button" id="add-course-btn">Add Course</button>
+          </div>
+        </section>
+        <section id="links-section" class="links-section">
+          <h3>Personal Links</h3>
+          <div id="link-list" class="links-list"></div>
+          <div class="link-actions">
+            <button type="button" id="add-link-btn">Add Link</button>
+          </div>
+        </section>
+        <label for="funFact">Funny/Interesting item to remember me by
+          <input type="text" id="funFact" name="funFact" />
+        </label>
+        <label for="share">I'd also like to share
+          <textarea id="share" name="share" rows="2"></textarea>
+        </label>
+        <label for="quote">Favorite Quote
+          <input type="text" id="quote" name="quote" />
+        </label>
+        <label for="quoteAuthor">Quote Author
+          <input type="text" id="quoteAuthor" name="quoteAuthor" />
+        </label>
+        <p id="form-validation" class="validation-message" role="alert" aria-live="polite"></p>
+        <div class="action-buttons">
+          <button type="button" id="generate-page-btn">Generate Introduction Page</button>
+          <button type="button" id="generate-html-btn">Show HTML Code</button>
+          <button type="button" id="generate-json-btn">Show JSON Code</button>
+        </div>
+      </form>
+      <section id="page-output-section" class="output-container">
+        <iframe
+          id="generated-page-frame"
+          class="generated-intro-frame"
+          title="Generated introduction preview"
+        ></iframe>
+        <button type="button" id="back-to-form-btn" class="back-button">Back to Form</button>
+      </section>
+      <section id="output-section" class="output-container">
+        <div class="output-panel">
+          <h3>Generated HTML</h3>
+          <pre><code id="generated-html-code" class="language-html"></code></pre>
+        </div>
+        <div class="output-panel">
+          <h3>Generated JSON</h3>
+          <pre><code id="generated-json-code" class="language-json"></code></pre>
+        </div>
+      </section>
+    </main>
+    <div data-include="components/footer.html"></div>
+    <script src="scripts/HTMLInclude.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.11.1/highlight.min.js"></script>
+    <script src="scripts/form.js"></script>
+  </body>
+</html>
